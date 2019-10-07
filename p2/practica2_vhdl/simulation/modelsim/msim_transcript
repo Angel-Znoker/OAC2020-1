@@ -1,0 +1,71 @@
+# Reading C:/intelFPGA/17.1/modelsim_ase/tcl/vsim/pref.tcl
+# do practica2_vhdl_run_msim_gate_vhdl.do
+# if {[file exists gate_work]} {
+# 	vdel -lib gate_work -all
+# }
+# vlib gate_work
+# vmap work gate_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work gate_work 
+# Copying C:/intelFPGA/17.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {practica2_vhdl.vho}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 12:32:59 on Aug 21,2019
+# vcom -reportprogress 300 -93 -work work practica2_vhdl.vho 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package VITAL_Timing
+# -- Loading package VITAL_Primitives
+# -- Loading package fiftyfivenm_atom_pack
+# -- Loading package fiftyfivenm_components
+# -- Compiling entity hard_block
+# -- Compiling architecture structure of hard_block
+# -- Loading package dffeas_pack
+# -- Loading package altera_primitives_components
+# -- Compiling entity practica2_vhdl
+# -- Compiling architecture structure of practica2_vhdl
+# End time: 12:32:59 on Aug 21,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vsim work.practica2_vhdl
+# vsim work.practica2_vhdl 
+# Start time: 12:33:04 on Aug 21,2019
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.vital_timing(body)
+# Loading ieee.vital_primitives(body)
+# Loading altera.dffeas_pack
+# Loading altera.altera_primitives_components
+# Loading fiftyfivenm.fiftyfivenm_atom_pack(body)
+# Loading fiftyfivenm.fiftyfivenm_components
+# Loading work.practica2_vhdl(structure)
+# Loading work.hard_block(structure)
+# Loading fiftyfivenm.fiftyfivenm_lcell_comb(vital_lcell_comb)
+# Loading fiftyfivenm.fiftyfivenm_io_obuf(behavior)
+# Loading fiftyfivenm.fiftyfivenm_io_ibuf(behavior)
+# Loading fiftyfivenm.fiftyfivenm_clkctrl(vital_clkctrl)
+# Loading fiftyfivenm.fiftyfivenm_ena_reg(behave)
+# Loading altera.dffeas(vital_dffeas)
+# Loading fiftyfivenm.fiftyfivenm_unvm(behavior)
+# Loading fiftyfivenm.fiftyfivenm_adcblock(behavior)
+add wave  \
+sim:/practica2_vhdl/clk \
+sim:/practica2_vhdl/E \
+sim:/practica2_vhdl/S
+force -freeze sim:/practica2_vhdl/clk 1 0, 0 {50 ps} -r 100
+force -freeze sim:/practica2_vhdl/E 1 0
+run
+run
+run
+run
+run
+run
+run
+run
+run
+# End time: 12:52:12 on Aug 21,2019, Elapsed time: 0:19:08
+# Errors: 0, Warnings: 0

@@ -1,0 +1,7 @@
+
+State Machine - |Block2|practica2_vhdl:inst|presente
+Name presente.S3 presente.S2 presente.S1 presente.S0 
+presente.S0 0 0 0 0 
+presente.S1 0 0 1 1 
+presente.S2 0 1 0 1 
+presente.S3 1 0 0 1 

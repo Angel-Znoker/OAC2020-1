@@ -1,0 +1,36 @@
+# do practica2.do
+# ** Warning: (vlib-34) Library already exists at "work".
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:04:49 on Aug 21,2019
+# vlog -work work practica2.vo 
+# -- Compiling module practica2
+# -- Compiling module hard_block
+# 
+# Top level modules:
+# 	practica2
+# End time: 04:04:50 on Aug 21,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 04:04:50 on Aug 21,2019
+# vlog -work work Waveform.vwf.vt 
+# -- Compiling module practica2_vlg_vec_tst
+# 
+# Top level modules:
+# 	practica2_vlg_vec_tst
+# End time: 04:04:50 on Aug 21,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim -novopt -c -t 1ps -L fiftyfivenm_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate_ver -L altera_lnsim_ver work.practica2_vlg_vec_tst 
+# Start time: 04:04:50 on Aug 21,2019
+# Loading work.practica2_vlg_vec_tst
+# Loading work.practica2
+# Loading work.hard_block
+# Loading altera_ver.dffeas
+# Loading altera_ver.PRIM_GDFF_LOW
+# ** Warning: (vsim-3017) practica2.vo(267): [TFMPC] - Too few port connections. Expected 8, found 7.
+#    Time: 0 ps  Iteration: 0  Instance: /practica2_vlg_vec_tst/i1/\~QUARTUS_CREATED_ADC1~  File: nofile
+# ** Warning: (vsim-3722) practica2.vo(267): [TFMPC] - Missing connection for port 'clk_dft'.
+# after#26
+# ** Note: $finish    : Waveform.vwf.vt(46)
+#    Time: 1 us  Iteration: 0  Instance: /practica2_vlg_vec_tst
+# End time: 04:04:51 on Aug 21,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 2
