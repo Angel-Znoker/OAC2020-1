@@ -1,0 +1,183 @@
+|practica5
+vf <= regSalidas:inst8.Svf
+A => muxEntradas:inst2.A
+B => muxEntradas:inst2.B
+C => muxEntradas:inst2.C
+clk => divider:inst7.clk
+switch => regSalidas:inst8.sw
+estado[0] <= regSalidas:inst8.estado[0]
+estado[1] <= regSalidas:inst8.estado[1]
+estado[2] <= regSalidas:inst8.estado[2]
+prueba[0] <= regSalidas:inst8.Sprueba[0]
+prueba[1] <= regSalidas:inst8.Sprueba[1]
+salidas[0] <= regSalidas:inst8.salidas[0]
+salidas[1] <= regSalidas:inst8.salidas[1]
+salidas[2] <= regSalidas:inst8.salidas[2]
+salidas[3] <= regSalidas:inst8.salidas[3]
+
+
+|practica5|regSalidas:inst8
+liga[0] => estado.DATAA
+liga[1] => estado.DATAA
+liga[2] => estado.DATAA
+sal[0] => salidas[0].DATAIN
+sal[1] => salidas[1].DATAIN
+sal[2] => salidas[2].DATAIN
+sal[3] => salidas[3].DATAIN
+vf => Svf.DATAA
+prueba[0] => Sprueba.DATAA
+prueba[1] => Sprueba.DATAA
+edoPresente[0] => estado.DATAB
+edoPresente[1] => estado.DATAB
+edoPresente[2] => estado.DATAB
+sw => estado.OUTPUTSELECT
+sw => estado.OUTPUTSELECT
+sw => estado.OUTPUTSELECT
+sw => Svf.OUTPUTSELECT
+sw => Sprueba.OUTPUTSELECT
+sw => Sprueba.OUTPUTSELECT
+estado[0] <= estado.DB_MAX_OUTPUT_PORT_TYPE
+estado[1] <= estado.DB_MAX_OUTPUT_PORT_TYPE
+estado[2] <= estado.DB_MAX_OUTPUT_PORT_TYPE
+salidas[0] <= sal[0].DB_MAX_OUTPUT_PORT_TYPE
+salidas[1] <= sal[1].DB_MAX_OUTPUT_PORT_TYPE
+salidas[2] <= sal[2].DB_MAX_OUTPUT_PORT_TYPE
+salidas[3] <= sal[3].DB_MAX_OUTPUT_PORT_TYPE
+Svf <= Svf.DB_MAX_OUTPUT_PORT_TYPE
+Sprueba[0] <= Sprueba.DB_MAX_OUTPUT_PORT_TYPE
+Sprueba[1] <= Sprueba.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica5|memoria:inst
+registro[0] => Mux0.IN10
+registro[0] => Mux2.IN10
+registro[0] => Mux4.IN5
+registro[0] => Mux5.IN10
+registro[0] => Mux6.IN5
+registro[0] => Mux7.IN10
+registro[0] => Mux8.IN10
+registro[0] => Mux9.IN5
+registro[0] => Mux10.IN10
+registro[0] => Mux11.IN10
+registro[0] => Mux12.IN10
+registro[1] => Mux0.IN9
+registro[1] => Mux1.IN5
+registro[1] => Mux2.IN9
+registro[1] => Mux3.IN5
+registro[1] => Mux5.IN9
+registro[1] => Mux6.IN4
+registro[1] => Mux7.IN9
+registro[1] => Mux8.IN9
+registro[1] => Mux10.IN9
+registro[1] => Mux11.IN9
+registro[1] => Mux12.IN9
+registro[2] => Mux0.IN8
+registro[2] => Mux1.IN4
+registro[2] => Mux2.IN8
+registro[2] => Mux3.IN4
+registro[2] => Mux4.IN4
+registro[2] => Mux5.IN8
+registro[2] => Mux7.IN8
+registro[2] => Mux8.IN8
+registro[2] => Mux9.IN4
+registro[2] => Mux10.IN8
+registro[2] => Mux11.IN8
+registro[2] => Mux12.IN8
+prueba[0] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+prueba[1] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+liga[0] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+liga[1] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+liga[2] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+vf <= <GND>
+salidasF[0] <= Mux8.DB_MAX_OUTPUT_PORT_TYPE
+salidasF[1] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+salidasF[2] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+salidasF[3] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+salidasV[0] <= Mux12.DB_MAX_OUTPUT_PORT_TYPE
+salidasV[1] <= Mux11.DB_MAX_OUTPUT_PORT_TYPE
+salidasV[2] <= Mux10.DB_MAX_OUTPUT_PORT_TYPE
+salidasV[3] <= Mux9.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica5|registro:inst1
+carga => contador.OUTPUTSELECT
+carga => contador.OUTPUTSELECT
+carga => contador.OUTPUTSELECT
+incrementa => contador.OUTPUTSELECT
+incrementa => contador.OUTPUTSELECT
+incrementa => contador.OUTPUTSELECT
+liga[0] => contador.DATAB
+liga[1] => contador.DATAB
+liga[2] => contador.DATAB
+clk => contador[0].CLK
+clk => contador[1].CLK
+clk => contador[2].CLK
+edoPresente[0] <= contador[0].DB_MAX_OUTPUT_PORT_TYPE
+edoPresente[1] <= contador[1].DB_MAX_OUTPUT_PORT_TYPE
+edoPresente[2] <= contador[2].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica5|muxEntradas:inst2
+A => salida.DATAB
+B => salida.DATAB
+C => salida.DATAA
+prueba[0] => Equal0.IN3
+prueba[0] => Equal1.IN3
+prueba[0] => Equal2.IN3
+prueba[1] => Equal0.IN2
+prueba[1] => Equal1.IN2
+prueba[1] => Equal2.IN2
+salida <= salida.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica5|divider:inst7
+clk => cuenta[0].CLK
+clk => cuenta[1].CLK
+clk => cuenta[2].CLK
+clk => cuenta[3].CLK
+clk => cuenta[4].CLK
+clk => cuenta[5].CLK
+clk => cuenta[6].CLK
+clk => cuenta[7].CLK
+clk => cuenta[8].CLK
+clk => cuenta[9].CLK
+clk => cuenta[10].CLK
+clk => cuenta[11].CLK
+clk => cuenta[12].CLK
+clk => cuenta[13].CLK
+clk => cuenta[14].CLK
+clk => cuenta[15].CLK
+clk => cuenta[16].CLK
+clk => cuenta[17].CLK
+clk => cuenta[18].CLK
+clk => cuenta[19].CLK
+clk => cuenta[20].CLK
+clk => cuenta[21].CLK
+clk => cuenta[22].CLK
+clk => cuenta[23].CLK
+clk => cuenta[24].CLK
+clk => cuenta[25].CLK
+clk => cuenta[26].CLK
+clk => cuenta[27].CLK
+div_clk <= cuenta[25].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|practica5|muxSalidas:inst4
+entrada => salidas.OUTPUTSELECT
+entrada => salidas.OUTPUTSELECT
+entrada => salidas.OUTPUTSELECT
+entrada => salidas.OUTPUTSELECT
+salidaF[0] => salidas.DATAB
+salidaF[1] => salidas.DATAB
+salidaF[2] => salidas.DATAB
+salidaF[3] => salidas.DATAB
+salidaV[0] => salidas.DATAA
+salidaV[1] => salidas.DATAA
+salidaV[2] => salidas.DATAA
+salidaV[3] => salidas.DATAA
+salidas[0] <= salidas.DB_MAX_OUTPUT_PORT_TYPE
+salidas[1] <= salidas.DB_MAX_OUTPUT_PORT_TYPE
+salidas[2] <= salidas.DB_MAX_OUTPUT_PORT_TYPE
+salidas[3] <= salidas.DB_MAX_OUTPUT_PORT_TYPE
+
+
