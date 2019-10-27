@@ -1,0 +1,276 @@
+# Reading C:/intelFPGA_lite/17.1/modelsim_ase/tcl/vsim/pref.tcl
+# do practica7_run_msim_rtl_vhdl.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/17.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vcom -93 -work work {C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/bufferDataBus.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:22:23 on Oct 26,2019
+# vcom -reportprogress 300 -93 -work work C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/bufferDataBus.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity bufferDataBus
+# -- Compiling architecture Behavioral of bufferDataBus
+# End time: 15:22:25 on Oct 26,2019, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/concatenador_entradas.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:22:25 on Oct 26,2019
+# vcom -reportprogress 300 -93 -work work C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/concatenador_entradas.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity concatenador_entradas
+# -- Compiling architecture Behavioral of concatenador_entradas
+# End time: 15:22:25 on Oct 26,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/registro_direccion.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:22:25 on Oct 26,2019
+# vcom -reportprogress 300 -93 -work work C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/registro_direccion.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity registro_direccion
+# -- Compiling architecture Behavioral of registro_direccion
+# End time: 15:22:25 on Oct 26,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/registro_instruccion.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:22:25 on Oct 26,2019
+# vcom -reportprogress 300 -93 -work work C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/registro_instruccion.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity registro_instruccion
+# -- Compiling architecture Behavioral of registro_instruccion
+# End time: 15:22:25 on Oct 26,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Acumulador/acumulador.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:22:26 on Oct 26,2019
+# vcom -reportprogress 300 -93 -work work C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Acumulador/acumulador.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Compiling entity acumulador
+# -- Compiling architecture Behavioral of acumulador
+# End time: 15:22:26 on Oct 26,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Contador/contador.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:22:26 on Oct 26,2019
+# vcom -reportprogress 300 -93 -work work C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Contador/contador.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Compiling entity contador
+# -- Compiling architecture Behavioral of contador
+# End time: 15:22:26 on Oct 26,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Contador/contador_ID.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:22:26 on Oct 26,2019
+# vcom -reportprogress 300 -93 -work work C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Contador/contador_ID.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Compiling entity contador_ID
+# -- Compiling architecture Behavioral of contador_ID
+# End time: 15:22:27 on Oct 26,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/flags/concatenador_datos.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:22:27 on Oct 26,2019
+# vcom -reportprogress 300 -93 -work work C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/flags/concatenador_datos.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity concatenador_datos
+# -- Compiling architecture Behavioral of concatenador_datos
+# End time: 15:22:27 on Oct 26,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/flags/registro.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:22:27 on Oct 26,2019
+# vcom -reportprogress 300 -93 -work work C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/flags/registro.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity registro
+# -- Compiling architecture Behavioral of registro
+# End time: 15:22:27 on Oct 26,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/flags/divisor_datos.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:22:27 on Oct 26,2019
+# vcom -reportprogress 300 -93 -work work C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/flags/divisor_datos.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity divisor_datos
+# -- Compiling architecture Behavioral of divisor_datos
+# End time: 15:22:27 on Oct 26,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/flags/mux1.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:22:28 on Oct 26,2019
+# vcom -reportprogress 300 -93 -work work C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/flags/mux1.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux1
+# -- Compiling architecture Behavioral of mux1
+# End time: 15:22:28 on Oct 26,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/flags/mux2.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:22:28 on Oct 26,2019
+# vcom -reportprogress 300 -93 -work work C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/flags/mux2.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux2
+# -- Compiling architecture Behavioral of mux2
+# End time: 15:22:28 on Oct 26,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/flags/mux3.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:22:28 on Oct 26,2019
+# vcom -reportprogress 300 -93 -work work C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/flags/mux3.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity mux3
+# -- Compiling architecture Behavioral of mux3
+# End time: 15:22:28 on Oct 26,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Interrupciones/ctrl_interrupciones.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:22:28 on Oct 26,2019
+# vcom -reportprogress 300 -93 -work work C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Interrupciones/ctrl_interrupciones.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity ctrl_interrupciones
+# -- Compiling architecture Behavioral of ctrl_interrupciones
+# End time: 15:22:29 on Oct 26,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/RAM/ram.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:22:29 on Oct 26,2019
+# vcom -reportprogress 300 -93 -work work C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/RAM/ram.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity ram
+# -- Compiling architecture Behavioral of ram
+# End time: 15:22:29 on Oct 26,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Secuenciador/logica_seleccion.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:22:29 on Oct 26,2019
+# vcom -reportprogress 300 -93 -work work C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Secuenciador/logica_seleccion.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity logica_seleccion
+# -- Compiling architecture Behavioral of logica_seleccion
+# End time: 15:22:29 on Oct 26,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Secuenciador/memory.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:22:29 on Oct 26,2019
+# vcom -reportprogress 300 -93 -work work C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Secuenciador/memory.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity memory
+# -- Compiling architecture Behavioral of memory
+# End time: 15:22:29 on Oct 26,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Secuenciador/registro_MicroInst.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:22:30 on Oct 26,2019
+# vcom -reportprogress 300 -93 -work work C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Secuenciador/registro_MicroInst.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity registro_MicroInst
+# -- Compiling architecture Behavioral of registro_MicroInst
+# End time: 15:22:30 on Oct 26,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Secuenciador/registro_sec.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:22:30 on Oct 26,2019
+# vcom -reportprogress 300 -93 -work work C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Secuenciador/registro_sec.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity registro_sec
+# -- Compiling architecture Behavioral of registro_sec
+# End time: 15:22:30 on Oct 26,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vcom -93 -work work {C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/UPA/upa.vhd}
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 15:22:30 on Oct 26,2019
+# vcom -reportprogress 300 -93 -work work C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/UPA/upa.vhd 
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package ATTRIBUTES
+# -- Loading package std_logic_misc
+# -- Compiling entity upa
+# -- Compiling architecture Behavioral of upa
+# ** Error: C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/UPA/upa.vhd(133): (vcom-1339) Case statement choices cover only 8 out of 729 cases.
+# ** Error: C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/UPA/upa.vhd(158): (vcom-1339) Case statement choices cover only 8 out of 729 cases.
+# ** Error: C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/UPA/upa.vhd(230): VHDL Compiler exiting
+# End time: 15:22:30 on Oct 26,2019, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# ** Error: C:/intelFPGA_lite/17.1/modelsim_ase/win32aloem/vcom failed.
+# Error in macro ./practica7_run_msim_rtl_vhdl.do line 27
+# C:/intelFPGA_lite/17.1/modelsim_ase/win32aloem/vcom failed.
+#     while executing
+# "vcom -93 -work work {C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/UPA/upa.vhd}"

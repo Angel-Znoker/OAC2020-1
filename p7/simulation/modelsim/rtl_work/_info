@@ -1,0 +1,840 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/angel/Documents/9no Semestre/oac/practicas/p7/simulation/modelsim
+Eacumulador
+Z1 w1572119614
+Z2 DPx8 synopsys 10 attributes 0 22 liCm]LV3<lX4Zl>o6^8IV1
+Z3 DPx4 ieee 14 std_logic_misc 0 22 BLzBaQbXS>Q1z>5YO]m[52
+Z4 DPx4 ieee 18 std_logic_unsigned 0 22 ;eZjO2D4ZDz<]0>8AL<ne1
+Z5 DPx4 ieee 15 std_logic_arith 0 22 [G314=:2zXJ`VORJe1J@Z1
+Z6 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z7 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+R0
+Z8 8C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Acumulador/acumulador.vhd
+Z9 FC:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Acumulador/acumulador.vhd
+l0
+L7
+VcN2HSdV6IZ>nZ8=zQXoBU2
+!s100 380ji:Ch<_DFDk5AJ5dKj0
+Z10 OV;C;10.5b;63
+31
+Z11 !s110 1572121346
+!i10b 1
+Z12 !s108 1572121346.000000
+Z13 !s90 -reportprogress|300|-93|-work|work|C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Acumulador/acumulador.vhd|
+Z14 !s107 C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Acumulador/acumulador.vhd|
+!i113 1
+Z15 o-93 -work work
+Z16 tExplicit 1 CvgOpt 0
+Abehavioral
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 10 acumulador 0 22 cN2HSdV6IZ>nZ8=zQXoBU2
+l23
+L20
+V1mAifEV^K7KY`bNEhDLU72
+!s100 BbW<ZGgkcfOaHfPj@S5M[1
+R10
+31
+R11
+!i10b 1
+R12
+R13
+R14
+!i113 1
+R15
+R16
+Ebufferdatabus
+Z17 w1572119460
+R4
+R5
+R6
+R7
+R0
+Z18 8C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/bufferDataBus.vhd
+Z19 FC:/Users/angel/Documents/9no Semestre/oac/practicas/p7/bufferDataBus.vhd
+l0
+L6
+V_9XS8F1fP`GS6F:jA2>G50
+!s100 o]A00cnDe]OQ;jzdlDcZ>2
+R10
+31
+!s110 1572121344
+!i10b 1
+Z20 !s108 1572121343.000000
+Z21 !s90 -reportprogress|300|-93|-work|work|C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/bufferDataBus.vhd|
+Z22 !s107 C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/bufferDataBus.vhd|
+!i113 1
+R15
+R16
+Abehavioral
+R4
+R5
+R6
+R7
+DEx4 work 13 bufferdatabus 0 22 _9XS8F1fP`GS6F:jA2>G50
+l14
+L12
+Vi;U?GNjZN@<Nk`0>:nfO>3
+!s100 mPK0ne;n`mXEEQm0]1j=V0
+R10
+31
+Z23 !s110 1572121345
+!i10b 1
+R20
+R21
+R22
+!i113 1
+R15
+R16
+Econcatenador_datos
+Z24 w1572119744
+R4
+R5
+R6
+R7
+R0
+Z25 8C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/flags/concatenador_datos.vhd
+Z26 FC:/Users/angel/Documents/9no Semestre/oac/practicas/p7/flags/concatenador_datos.vhd
+l0
+L6
+VJ2f3KBPm@hf:TzRQKU2mU0
+!s100 >dDLhlciiNOgzzQRY9PZ>0
+R10
+31
+Z27 !s110 1572121347
+!i10b 1
+Z28 !s108 1572121347.000000
+Z29 !s90 -reportprogress|300|-93|-work|work|C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/flags/concatenador_datos.vhd|
+Z30 !s107 C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/flags/concatenador_datos.vhd|
+!i113 1
+R15
+R16
+Abehavioral
+R4
+R5
+R6
+R7
+DEx4 work 18 concatenador_datos 0 22 J2f3KBPm@hf:TzRQKU2mU0
+l19
+L18
+VI29l5J8b`ZFNoDWglK04:1
+!s100 h@W;f0T>eM34@dg?lI:8d0
+R10
+31
+R27
+!i10b 1
+R28
+R29
+R30
+!i113 1
+R15
+R16
+Econcatenador_entradas
+Z31 w1572119485
+R4
+R5
+R6
+R7
+R0
+Z32 8C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/concatenador_entradas.vhd
+Z33 FC:/Users/angel/Documents/9no Semestre/oac/practicas/p7/concatenador_entradas.vhd
+l0
+L6
+VRT[CeCH66>QoW94Q0<g^]1
+!s100 A36mcSCbV8o>NzgK>VE0^2
+R10
+31
+R23
+!i10b 1
+Z34 !s108 1572121345.000000
+Z35 !s90 -reportprogress|300|-93|-work|work|C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/concatenador_entradas.vhd|
+Z36 !s107 C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/concatenador_entradas.vhd|
+!i113 1
+R15
+R16
+Abehavioral
+R4
+R5
+R6
+R7
+DEx4 work 21 concatenador_entradas 0 22 RT[CeCH66>QoW94Q0<g^]1
+l43
+L42
+V`H[Vg[1CFKm0oVo`:LhLm2
+!s100 imoM:BFeom]B2V?oj]ib40
+R10
+31
+R23
+!i10b 1
+R34
+R35
+R36
+!i113 1
+R15
+R16
+Econtador
+Z37 w1572119658
+R2
+R3
+R4
+R5
+R6
+R7
+R0
+Z38 8C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Contador/contador.vhd
+Z39 FC:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Contador/contador.vhd
+l0
+L7
+VKl_Q;?e_]B6X3bUCBICEK3
+!s100 Ce]Tm?Z;X7HfSckbAKRGa1
+R10
+31
+R11
+!i10b 1
+R12
+Z40 !s90 -reportprogress|300|-93|-work|work|C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Contador/contador.vhd|
+Z41 !s107 C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Contador/contador.vhd|
+!i113 1
+R15
+R16
+Abehavioral
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 8 contador 0 22 Kl_Q;?e_]B6X3bUCBICEK3
+l29
+L26
+V_N`=1Eng4z4[1?3VG8P273
+!s100 O5<dn?3mni^hR5`Z]adc62
+R10
+31
+R11
+!i10b 1
+R12
+R40
+R41
+!i113 1
+R15
+R16
+Econtador_id
+Z42 w1572119695
+R2
+R3
+R4
+R5
+R6
+R7
+R0
+Z43 8C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Contador/contador_ID.vhd
+Z44 FC:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Contador/contador_ID.vhd
+l0
+L7
+VV24NIVGo<;=@JcP=>zWDT2
+!s100 6NGg0lcF9d:aYVYmAh`B43
+R10
+31
+R27
+!i10b 1
+R12
+Z45 !s90 -reportprogress|300|-93|-work|work|C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Contador/contador_ID.vhd|
+Z46 !s107 C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Contador/contador_ID.vhd|
+!i113 1
+R15
+R16
+Abehavioral
+R2
+R3
+R4
+R5
+R6
+R7
+DEx4 work 11 contador_id 0 22 V24NIVGo<;=@JcP=>zWDT2
+l30
+L27
+V:0B5]mzRG^=kMzKUcX]bM2
+!s100 MDPdD1i:4z`81=[kk7l3i1
+R10
+31
+R27
+!i10b 1
+R12
+R45
+R46
+!i113 1
+R15
+R16
+Ectrl_interrupciones
+Z47 w1572119910
+R6
+R7
+R0
+Z48 8C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Interrupciones/ctrl_interrupciones.vhd
+Z49 FC:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Interrupciones/ctrl_interrupciones.vhd
+l0
+L4
+VTGQTg>W:=gC?@W<NiaaYK0
+!s100 j9zoVng73`fbQ1DJMP@L32
+R10
+31
+Z50 !s110 1572121348
+!i10b 1
+Z51 !s108 1572121348.000000
+Z52 !s90 -reportprogress|300|-93|-work|work|C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Interrupciones/ctrl_interrupciones.vhd|
+Z53 !s107 C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Interrupciones/ctrl_interrupciones.vhd|
+!i113 1
+R15
+R16
+Abehavioral
+R6
+R7
+DEx4 work 19 ctrl_interrupciones 0 22 TGQTg>W:=gC?@W<NiaaYK0
+l28
+L20
+V;SgKCMAf0_>A76fAHo]Z01
+!s100 I^7LNG?1>i`mb6bA257KH0
+R10
+31
+R50
+!i10b 1
+R51
+R52
+R53
+!i113 1
+R15
+R16
+Edivisor_datos
+Z54 w1572119797
+R4
+R5
+R6
+R7
+R0
+Z55 8C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/flags/divisor_datos.vhd
+Z56 FC:/Users/angel/Documents/9no Semestre/oac/practicas/p7/flags/divisor_datos.vhd
+l0
+L6
+VSO=]?5fjSMfBR27<4FZz_0
+!s100 z5zgZi3DR2U>aBaRRn7_C3
+R10
+31
+R27
+!i10b 1
+R28
+Z57 !s90 -reportprogress|300|-93|-work|work|C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/flags/divisor_datos.vhd|
+Z58 !s107 C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/flags/divisor_datos.vhd|
+!i113 1
+R15
+R16
+Abehavioral
+R4
+R5
+R6
+R7
+DEx4 work 13 divisor_datos 0 22 SO=]?5fjSMfBR27<4FZz_0
+l20
+L19
+VIXeY@dlS89WWKjnb]O==80
+!s100 iJK::[N`=174^SNEo=BeN0
+R10
+31
+R27
+!i10b 1
+R28
+R57
+R58
+!i113 1
+R15
+R16
+Elogica_seleccion
+Z59 w1572119972
+R4
+R5
+R6
+R7
+R0
+Z60 8C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Secuenciador/logica_seleccion.vhd
+Z61 FC:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Secuenciador/logica_seleccion.vhd
+l0
+L6
+VGXb1dkoBlhMCJ5OVQodiH2
+!s100 goAN9_@aBXIV@aL8fPH613
+R10
+31
+Z62 !s110 1572121349
+!i10b 1
+Z63 !s108 1572121349.000000
+Z64 !s90 -reportprogress|300|-93|-work|work|C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Secuenciador/logica_seleccion.vhd|
+Z65 !s107 C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Secuenciador/logica_seleccion.vhd|
+!i113 1
+R15
+R16
+Abehavioral
+R4
+R5
+R6
+R7
+DEx4 work 16 logica_seleccion 0 22 GXb1dkoBlhMCJ5OVQodiH2
+l16
+L15
+VDekK7DZ7WIY:Ph:2Ied>X0
+!s100 eaEh8n2;[1]SV`g5536bf0
+R10
+31
+R62
+!i10b 1
+R63
+R64
+R65
+!i113 1
+R15
+R16
+Ememory
+Z66 w1572119999
+R4
+R5
+R6
+R7
+R0
+Z67 8C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Secuenciador/memory.vhd
+Z68 FC:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Secuenciador/memory.vhd
+l0
+L6
+VoC@<k5m1@E[zQJIL3n7Ec3
+!s100 06[D^4lU;VeKGO<zz7I4M2
+R10
+31
+R62
+!i10b 1
+R63
+Z69 !s90 -reportprogress|300|-93|-work|work|C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Secuenciador/memory.vhd|
+Z70 !s107 C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Secuenciador/memory.vhd|
+!i113 1
+R15
+R16
+Abehavioral
+R4
+R5
+R6
+R7
+DEx4 work 6 memory 0 22 oC@<k5m1@E[zQJIL3n7Ec3
+l14
+L12
+Vcz[>^>WG1andk40VU6<kX2
+!s100 `E<R9fU^FEJ[3lJ=O2=4@0
+R10
+31
+R62
+!i10b 1
+R63
+R69
+R70
+!i113 1
+R15
+R16
+Emux1
+Z71 w1572119816
+R6
+R7
+R0
+Z72 8C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/flags/mux1.vhd
+Z73 FC:/Users/angel/Documents/9no Semestre/oac/practicas/p7/flags/mux1.vhd
+l0
+L4
+Vk4AO=CYb`0I?Xe6[IWeg]1
+!s100 5ag:_`eZTO11;JKfo5fDL0
+R10
+31
+R50
+!i10b 1
+R51
+Z74 !s90 -reportprogress|300|-93|-work|work|C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/flags/mux1.vhd|
+Z75 !s107 C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/flags/mux1.vhd|
+!i113 1
+R15
+R16
+Abehavioral
+R6
+R7
+DEx4 work 4 mux1 0 22 k4AO=CYb`0I?Xe6[IWeg]1
+l12
+L11
+VHKQ43dKgzh_h_be[NYzmk3
+!s100 e_J7W^^56>_Q;HT49>T1o2
+R10
+31
+R50
+!i10b 1
+R51
+R74
+R75
+!i113 1
+R15
+R16
+Emux2
+Z76 w1572119830
+R6
+R7
+R0
+Z77 8C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/flags/mux2.vhd
+Z78 FC:/Users/angel/Documents/9no Semestre/oac/practicas/p7/flags/mux2.vhd
+l0
+L4
+VG`zRA<V?AFkP44Um1R<@c2
+!s100 J@1ZbD_ccOln1=b@E0nj<2
+R10
+31
+R50
+!i10b 1
+R51
+Z79 !s90 -reportprogress|300|-93|-work|work|C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/flags/mux2.vhd|
+Z80 !s107 C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/flags/mux2.vhd|
+!i113 1
+R15
+R16
+Abehavioral
+R6
+R7
+DEx4 work 4 mux2 0 22 G`zRA<V?AFkP44Um1R<@c2
+l15
+L14
+VhL0CEaa:CInDoL=9hzXL20
+!s100 T]lbfR=CiCok1C^Ji:1YW0
+R10
+31
+R50
+!i10b 1
+R51
+R79
+R80
+!i113 1
+R15
+R16
+Emux3
+Z81 w1572119869
+R6
+R7
+R0
+Z82 8C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/flags/mux3.vhd
+Z83 FC:/Users/angel/Documents/9no Semestre/oac/practicas/p7/flags/mux3.vhd
+l0
+L4
+VA5>coQEW^E^GEdXn3SSYN3
+!s100 S>l;>WE?Q5eNMTEj7:KKZ2
+R10
+31
+R50
+!i10b 1
+R51
+Z84 !s90 -reportprogress|300|-93|-work|work|C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/flags/mux3.vhd|
+Z85 !s107 C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/flags/mux3.vhd|
+!i113 1
+R15
+R16
+Abehavioral
+R6
+R7
+DEx4 work 4 mux3 0 22 A5>coQEW^E^GEdXn3SSYN3
+l20
+L19
+VJK8iG4jY_jCJ_cfNL]bJ`3
+!s100 k4enzz9F<nV2iU3b0KnFf1
+R10
+31
+R50
+!i10b 1
+R51
+R84
+R85
+!i113 1
+R15
+R16
+Eram
+Z86 w1572119936
+R4
+R5
+R6
+R7
+R0
+Z87 8C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/RAM/ram.vhd
+Z88 FC:/Users/angel/Documents/9no Semestre/oac/practicas/p7/RAM/ram.vhd
+l0
+L6
+Vz6[MET3I3HJ[TSSzFMg1a0
+!s100 GGCIao_Xj?TmFVn2WLD9V2
+R10
+31
+R62
+!i10b 1
+R63
+Z89 !s90 -reportprogress|300|-93|-work|work|C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/RAM/ram.vhd|
+Z90 !s107 C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/RAM/ram.vhd|
+!i113 1
+R15
+R16
+Abehavioral
+R4
+R5
+R6
+R7
+DEx4 work 3 ram 0 22 z6[MET3I3HJ[TSSzFMg1a0
+l20
+L15
+VUVjSzIkALQ51oC3@b[[Ui0
+!s100 T=`5F>_P7MbJkC2nCS]=:3
+R10
+31
+R62
+!i10b 1
+R63
+R89
+R90
+!i113 1
+R15
+R16
+Eregistro
+Z91 w1572119771
+R6
+R7
+R0
+Z92 8C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/flags/registro.vhd
+Z93 FC:/Users/angel/Documents/9no Semestre/oac/practicas/p7/flags/registro.vhd
+l0
+L4
+Vlhn7;4g913G`ez[6[99]91
+!s100 @zVQBT;6Ul`4cF_8GaeTJ3
+R10
+31
+R27
+!i10b 1
+R28
+Z94 !s90 -reportprogress|300|-93|-work|work|C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/flags/registro.vhd|
+Z95 !s107 C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/flags/registro.vhd|
+!i113 1
+R15
+R16
+Abehavioral
+R6
+R7
+DEx4 work 8 registro 0 22 lhn7;4g913G`ez[6[99]91
+l16
+L13
+V1V9@BCWEaz6HVTXkWAO6h1
+!s100 zQ5UEak<ZK2fFL9FQ=kF:1
+R10
+31
+R27
+!i10b 1
+R28
+R94
+R95
+!i113 1
+R15
+R16
+Eregistro_direccion
+Z96 w1572119509
+R4
+R5
+R6
+R7
+R0
+Z97 8C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/registro_direccion.vhd
+Z98 FC:/Users/angel/Documents/9no Semestre/oac/practicas/p7/registro_direccion.vhd
+l0
+L6
+VeT=AI=AGO4Db_LLA3VKOd1
+!s100 :L_jNN`<nZbDBc3na9e@g3
+R10
+31
+R23
+!i10b 1
+R34
+Z99 !s90 -reportprogress|300|-93|-work|work|C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/registro_direccion.vhd|
+Z100 !s107 C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/registro_direccion.vhd|
+!i113 1
+R15
+R16
+Abehavioral
+R4
+R5
+R6
+R7
+DEx4 work 18 registro_direccion 0 22 eT=AI=AGO4Db_LLA3VKOd1
+l15
+L13
+VElMPSKYSin1MNn7<UPIM@3
+!s100 2>zUHBC`gYCm<zEKYXMW50
+R10
+31
+R23
+!i10b 1
+R34
+R99
+R100
+!i113 1
+R15
+R16
+Eregistro_instruccion
+Z101 w1572119534
+R4
+R5
+R6
+R7
+R0
+Z102 8C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/registro_instruccion.vhd
+Z103 FC:/Users/angel/Documents/9no Semestre/oac/practicas/p7/registro_instruccion.vhd
+l0
+L6
+VY_:?D2Zjj9DR=Ca953U`42
+!s100 _`D`BB^YFdD[:^MlHS[7Q0
+R10
+31
+R23
+!i10b 1
+R34
+Z104 !s90 -reportprogress|300|-93|-work|work|C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/registro_instruccion.vhd|
+Z105 !s107 C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/registro_instruccion.vhd|
+!i113 1
+R15
+R16
+Abehavioral
+R4
+R5
+R6
+R7
+DEx4 work 20 registro_instruccion 0 22 Y_:?D2Zjj9DR=Ca953U`42
+l15
+L13
+VWkF2U4=e@JhhR:_nL?h=;3
+!s100 C]=aT<F@6P_<UkcB_Ae7h0
+R10
+31
+R23
+!i10b 1
+R34
+R104
+R105
+!i113 1
+R15
+R16
+Eregistro_microinst
+Z106 w1572120029
+R4
+R5
+R6
+R7
+R0
+Z107 8C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Secuenciador/registro_MicroInst.vhd
+Z108 FC:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Secuenciador/registro_MicroInst.vhd
+l0
+L6
+V=hZ<JliQ=VkTGmg^VH_FY0
+!s100 b77J9e8Gz]hGNnRh;78`Z0
+R10
+31
+Z109 !s110 1572121350
+!i10b 1
+Z110 !s108 1572121350.000000
+Z111 !s90 -reportprogress|300|-93|-work|work|C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Secuenciador/registro_MicroInst.vhd|
+Z112 !s107 C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Secuenciador/registro_MicroInst.vhd|
+!i113 1
+R15
+R16
+Abehavioral
+R4
+R5
+R6
+R7
+DEx4 work 18 registro_microinst 0 22 =hZ<JliQ=VkTGmg^VH_FY0
+l15
+L13
+VoL=``GhgWN7Ce2n=36Y[:1
+!s100 9<?RMne:AEKI]?^=Xb8Od3
+R10
+31
+R109
+!i10b 1
+R110
+R111
+R112
+!i113 1
+R15
+R16
+Eregistro_sec
+Z113 w1572120059
+R6
+R7
+R0
+Z114 8C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Secuenciador/registro_sec.vhd
+Z115 FC:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Secuenciador/registro_sec.vhd
+l0
+L4
+VC;PbNR9Ei^F^?maa90CbP2
+!s100 Aa1oZb6aHaZ7VA1i6`zk`3
+R10
+31
+R109
+!i10b 1
+R110
+Z116 !s90 -reportprogress|300|-93|-work|work|C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Secuenciador/registro_sec.vhd|
+Z117 !s107 C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Secuenciador/registro_sec.vhd|
+!i113 1
+R15
+R16
+Abehavioral
+R6
+R7
+DEx4 work 12 registro_sec 0 22 C;PbNR9Ei^F^?maa90CbP2
+l132
+L69
+V?[B10NjeS33bZ@BioAf4L2
+!s100 3d@8@=U`_ZRf@nX3JRi2D1
+R10
+31
+R109
+!i10b 1
+R110
+R116
+R117
+!i113 1
+R15
+R16
+Eupa
+w1572120090
+R2
+R3
+R4
+R5
+R6
+R7
+R0
+8C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/UPA/upa.vhd
+FC:/Users/angel/Documents/9no Semestre/oac/practicas/p7/UPA/upa.vhd
+l0
+L7
+V4Q1SnEJ4XbA7Q3cgmn>EK0
+!s100 W3Ml1CENdjln8K2babXb@2
+R10
+31
+R109
+!i10b 1
+R110
+!s90 -reportprogress|300|-93|-work|work|C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/UPA/upa.vhd|
+!s107 C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/UPA/upa.vhd|
+!i113 1
+R15
+R16
