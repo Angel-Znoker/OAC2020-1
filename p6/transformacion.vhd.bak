@@ -1,0 +1,25 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_arith.all;
+use ieee.std_logic_unsigned.all;
+
+entity transformación is
+	port(	sw : in std_logic_vector(1 downto 0);
+			edoTrans : out std_logic_vector(3 downto 0));
+end transformación;
+
+architecture Behavioral of transformación is
+begin
+	process(sw)
+	begin
+		if (sw = "00") then
+			edoTrans <= "0011";
+		elsif (sw = "01") then
+			edoTrans <= "1000";
+		elsif (sw = "10") then
+			edoTrans <= "1011";
+		else
+			edoTrans <= "0000";
+		end if;
+	end process;
+end Behavioral;
