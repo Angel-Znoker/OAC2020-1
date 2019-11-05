@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "10/26/2019 16:36:54"
+-- Generated on "11/01/2019 21:48:16"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          practica7
 -- 
@@ -37,14 +37,24 @@ SIGNAL AccA_sal : STD_LOGIC_VECTOR(7 DOWNTO 0);
 SIGNAL AccB_sal : STD_LOGIC_VECTOR(7 DOWNTO 0);
 SIGNAL clk : STD_LOGIC;
 SIGNAL EdoPres : STD_LOGIC_VECTOR(11 DOWNTO 0);
+SIGNAL FZ : STD_LOGIC;
+SIGNAL PC : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL rst : STD_LOGIC;
+SIGNAL suma : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL var_i : STD_LOGIC_VECTOR(7 DOWNTO 0);
+SIGNAL var_n : STD_LOGIC_VECTOR(7 DOWNTO 0);
 COMPONENT practica7
 	PORT (
 	AccA_sal : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
 	AccB_sal : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
 	clk : IN STD_LOGIC;
 	EdoPres : OUT STD_LOGIC_VECTOR(11 DOWNTO 0);
-	rst : IN STD_LOGIC
+	FZ : OUT STD_LOGIC;
+	PC : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+	rst : IN STD_LOGIC;
+	suma : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+	var_i : OUT STD_LOGIC_VECTOR(7 DOWNTO 0);
+	var_n : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)
 	);
 END COMPONENT;
 BEGIN
@@ -55,7 +65,12 @@ BEGIN
 	AccB_sal => AccB_sal,
 	clk => clk,
 	EdoPres => EdoPres,
-	rst => rst
+	FZ => FZ,
+	PC => PC,
+	rst => rst,
+	suma => suma,
+	var_i => var_i,
+	var_n => var_n
 	);
 
 -- clk
@@ -63,9 +78,9 @@ t_prcs_clk: PROCESS
 BEGIN
 LOOP
 	clk <= '0';
-	WAIT FOR 5000 ps;
+	WAIT FOR 1000 ps;
 	clk <= '1';
-	WAIT FOR 5000 ps;
+	WAIT FOR 1000 ps;
 	IF (NOW >= 1000000 ps) THEN WAIT; END IF;
 END LOOP;
 END PROCESS t_prcs_clk;

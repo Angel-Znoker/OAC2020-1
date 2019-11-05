@@ -630,7 +630,7 @@ refer to the applicable agreement for further details.
 )
 (pin
 	(output)
-	(rect 496 296 672 312)
+	(rect 496 328 672 344)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
 	(text "Z" (rect 90 0 95 17)(font "Intel Clear" ))
 	(pt 0 8)
@@ -825,7 +825,7 @@ refer to the applicable agreement for further details.
 	)
 )
 (symbol
-	(rect 296 256 488 368)
+	(rect 304 288 496 400)
 	(text "registro" (rect 5 0 41 12)(font "Arial" ))
 	(text "inst2" (rect 8 96 30 113)(font "Intel Clear" ))
 	(port
@@ -1587,10 +1587,6 @@ refer to the applicable agreement for further details.
 	)
 )
 (connector
-	(pt 232 368)
-	(pt 16 368)
-)
-(connector
 	(pt 32 608)
 	(pt 16 608)
 )
@@ -1854,24 +1850,8 @@ refer to the applicable agreement for further details.
 	(pt 296 208)
 )
 (connector
-	(pt 272 304)
-	(pt 296 304)
-)
-(connector
-	(pt 248 320)
-	(pt 296 320)
-)
-(connector
-	(pt 232 336)
-	(pt 296 336)
-)
-(connector
 	(pt 16 224)
 	(pt 296 224)
-)
-(connector
-	(pt 232 368)
-	(pt 232 336)
 )
 (connector
 	(pt 272 424)
@@ -1900,10 +1880,6 @@ refer to the applicable agreement for further details.
 (connector
 	(pt 192 176)
 	(pt 296 176)
-)
-(connector
-	(pt 192 288)
-	(pt 296 288)
 )
 (connector
 	(pt 192 408)
@@ -1936,10 +1912,6 @@ refer to the applicable agreement for further details.
 (connector
 	(pt 488 424)
 	(pt 496 424)
-)
-(connector
-	(pt 488 304)
-	(pt 496 304)
 )
 (connector
 	(pt 488 192)
@@ -2030,14 +2002,6 @@ refer to the applicable agreement for further details.
 	(pt 248 208)
 )
 (connector
-	(pt 272 192)
-	(pt 272 304)
-)
-(connector
-	(pt 248 208)
-	(pt 248 320)
-)
-(connector
 	(pt 192 80)
 	(pt 272 80)
 )
@@ -2052,14 +2016,6 @@ refer to the applicable agreement for further details.
 (connector
 	(pt 248 96)
 	(pt 296 96)
-)
-(connector
-	(pt 272 304)
-	(pt 272 424)
-)
-(connector
-	(pt 248 320)
-	(pt 248 440)
 )
 (connector
 	(pt 272 424)
@@ -2098,10 +2054,6 @@ refer to the applicable agreement for further details.
 	(pt 688 176)
 )
 (connector
-	(pt 488 288)
-	(pt 696 288)
-)
-(connector
 	(pt 488 408)
 	(pt 704 408)
 )
@@ -2136,10 +2088,6 @@ refer to the applicable agreement for further details.
 (connector
 	(pt 696 96)
 	(pt 752 96)
-)
-(connector
-	(pt 696 288)
-	(pt 696 96)
 )
 (connector
 	(pt 704 112)
@@ -2196,14 +2144,60 @@ refer to the applicable agreement for further details.
 	(pt 920 64)
 	(bus)
 )
+(connector
+	(pt 192 288)
+	(pt 296 288)
+)
+(connector
+	(pt 296 320)
+	(pt 304 320)
+)
+(connector
+	(pt 248 352)
+	(pt 304 352)
+)
+(connector
+	(pt 696 320)
+	(pt 496 320)
+)
+(connector
+	(pt 696 96)
+	(pt 696 320)
+)
+(connector
+	(pt 272 192)
+	(pt 272 336)
+)
+(connector
+	(pt 272 336)
+	(pt 272 424)
+)
+(connector
+	(pt 248 208)
+	(pt 248 352)
+)
+(connector
+	(pt 248 352)
+	(pt 248 440)
+)
+(connector
+	(pt 16 368)
+	(pt 304 368)
+)
+(connector
+	(pt 296 288)
+	(pt 296 320)
+)
+(connector
+	(pt 272 336)
+	(pt 304 336)
+)
 (junction (pt -248 288))
 (junction (pt -320 528))
 (junction (pt -320 288))
 (junction (pt -560 144))
 (junction (pt 272 192))
 (junction (pt 248 208))
-(junction (pt 272 304))
-(junction (pt 248 320))
 (junction (pt 272 424))
 (junction (pt 248 440))
 (junction (pt 272 80))
@@ -2214,3 +2208,5 @@ refer to the applicable agreement for further details.
 (junction (pt 248 664))
 (junction (pt 272 760))
 (junction (pt 248 776))
+(junction (pt 272 336))
+(junction (pt 248 352))

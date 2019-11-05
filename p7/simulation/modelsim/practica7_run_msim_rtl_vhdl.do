@@ -25,5 +25,4 @@ vcom -93 -work work {C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Secu
 vcom -93 -work work {C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Secuenciador/registro_MicroInst.vhd}
 vcom -93 -work work {C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/Secuenciador/registro_sec.vhd}
 vcom -93 -work work {C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/UPA/upa.vhd}
-vcom -93 -work work {C:/Users/angel/Documents/9no Semestre/oac/practicas/p7/salidas.vhd}
 

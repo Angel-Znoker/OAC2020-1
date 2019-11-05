@@ -9,7 +9,7 @@ z2
 cModel Technology
 Z0 dC:/Users/angel/Documents/9no Semestre/oac/practicas/p7/simulation/qsim
 Ehard_block
-Z1 w1572125819
+Z1 w1572666506
 Z2 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
 Z3 DPx11 fiftyfivenm 21 fiftyfivenm_atom_pack 0 22 <L;kP5e_CYmnMCFQ1Hi7l2
 Z4 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
@@ -25,9 +25,9 @@ V8_BbEmGd;OHS6h@;gFc7W3
 !s100 ROH=D<N4CT6aCZ<37A[_?0
 Z10 OV;C;10.5b;63
 32
-Z11 !s110 1572125822
+Z11 !s110 1572666518
 !i10b 1
-Z12 !s108 1572125822.000000
+Z12 !s108 1572666517.000000
 Z13 !s90 -work|work|practica7.vho|
 Z14 !s107 practica7.vho|
 !i113 1
@@ -70,8 +70,8 @@ R8
 R9
 l0
 L90
-VAcXYkelT:VTZfH8k;UFmS0
-!s100 =B]1aE;i<_P=iK;?8Q=_a0
+VMkM=gXQRfW?DTTB`aU`J<1
+!s100 heBN=NH^RU[7RKj]d8UES2
 R10
 32
 R11
@@ -91,14 +91,14 @@ R4
 R5
 R6
 R18
-DEx4 work 9 practica7 0 22 AcXYkelT:VTZfH8k;UFmS0
-l537
-L133
-VV_a<C?P?cK:=`C]HeV3kI0
-!s100 aaiBR9J;i=MeSmAn5X<`L0
+DEx4 work 9 practica7 0 22 MkM=gXQRfW?DTTB`aU`J<1
+l4232
+L179
+V0T1oV]f]ook^4?PE=@O@V0
+!s100 7[F`d;M<?bRjQeO2MKZgn3
 R10
 32
-R11
+!s110 1572666519
 !i10b 1
 R12
 R13
@@ -107,7 +107,7 @@ R14
 R15
 R16
 Epractica7_vhd_vec_tst
-Z19 w1572125814
+Z19 w1572666496
 R5
 R6
 R0
@@ -119,9 +119,9 @@ V[B<J5HJ:PN?VZP??I`X9b3
 !s100 _DieQg2iK;LQg^j:3a@BH2
 R10
 32
-Z22 !s110 1572125823
+Z22 !s110 1572666522
 !i10b 1
-Z23 !s108 1572125823.000000
+Z23 !s108 1572666522.000000
 Z24 !s90 -work|work|Waveform.vwf.vht|
 Z25 !s107 Waveform.vwf.vht|
 !i113 1
@@ -131,10 +131,10 @@ Apractica7_arch
 R5
 R6
 Z26 DEx4 work 21 practica7_vhd_vec_tst 0 22 [B<J5HJ:PN?VZP??I`X9b3
-l50
+l60
 L33
-V>b[5916_zHT:<8o_O<TdG1
-!s100 [;e?`C`IE^l6lX[3HOoUM3
+Z27 VkhDm9R5j_S>9jmoB63mcG0
+Z28 !s100 l`NT:njLQm45D9S?ke0V[3
 R10
 32
 R22

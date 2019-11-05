@@ -4,123 +4,51 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "AccA_sal[7]",
+					"name" : "salida[7]",
 					"strict" : false
 				},
 				{
-					"name" : "AccA_sal[6]",
+					"name" : "salida[6]",
 					"strict" : false
 				},
 				{
-					"name" : "AccA_sal[5]",
+					"name" : "salida[5]",
 					"strict" : false
 				},
 				{
-					"name" : "AccA_sal[4]",
+					"name" : "salida[4]",
 					"strict" : false
 				},
 				{
-					"name" : "AccA_sal[3]",
+					"name" : "salida[3]",
 					"strict" : false
 				},
 				{
-					"name" : "AccA_sal[2]",
+					"name" : "salida[2]",
 					"strict" : false
 				},
 				{
-					"name" : "AccA_sal[1]",
+					"name" : "salida[1]",
 					"strict" : false
 				},
 				{
-					"name" : "AccA_sal[0]",
+					"name" : "salida[0]",
 					"strict" : false
 				},
 				{
-					"name" : "AccB_sal[7]",
+					"name" : "sw[1]",
 					"strict" : false
 				},
 				{
-					"name" : "AccB_sal[6]",
-					"strict" : false
-				},
-				{
-					"name" : "AccB_sal[5]",
-					"strict" : false
-				},
-				{
-					"name" : "AccB_sal[4]",
-					"strict" : false
-				},
-				{
-					"name" : "AccB_sal[3]",
-					"strict" : false
-				},
-				{
-					"name" : "AccB_sal[2]",
-					"strict" : false
-				},
-				{
-					"name" : "AccB_sal[1]",
-					"strict" : false
-				},
-				{
-					"name" : "AccB_sal[0]",
-					"strict" : false
-				},
-				{
-					"name" : "EdoPres[11]",
-					"strict" : false
-				},
-				{
-					"name" : "EdoPres[10]",
-					"strict" : false
-				},
-				{
-					"name" : "EdoPres[9]",
-					"strict" : false
-				},
-				{
-					"name" : "EdoPres[8]",
-					"strict" : false
-				},
-				{
-					"name" : "EdoPres[7]",
-					"strict" : false
-				},
-				{
-					"name" : "EdoPres[6]",
-					"strict" : false
-				},
-				{
-					"name" : "EdoPres[5]",
-					"strict" : false
-				},
-				{
-					"name" : "EdoPres[4]",
-					"strict" : false
-				},
-				{
-					"name" : "EdoPres[3]",
-					"strict" : false
-				},
-				{
-					"name" : "EdoPres[2]",
-					"strict" : false
-				},
-				{
-					"name" : "EdoPres[1]",
-					"strict" : false
-				},
-				{
-					"name" : "EdoPres[0]",
-					"strict" : false
-				},
-				{
-					"name" : "clk",
+					"name" : "sw[0]",
 					"strict" : false
 				},
 				{
 					"name" : "rst",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
 					"strict" : false
 				}
 			]

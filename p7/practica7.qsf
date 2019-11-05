@@ -70,7 +70,6 @@ set_global_assignment -name VHDL_FILE Secuenciador/registro_MicroInst.vhd
 set_global_assignment -name VHDL_FILE Secuenciador/registro_sec.vhd
 set_global_assignment -name VHDL_FILE UPA/upa.vhd
 set_global_assignment -name VHDL_FILE divisor.vhd
-set_global_assignment -name VHDL_FILE salidas.vhd
 set_global_assignment -name BDF_FILE red_estados.bdf
 set_global_assignment -name BDF_FILE secuenciador.bdf
 set_global_assignment -name BDF_FILE practica7.bdf
@@ -78,4 +77,31 @@ set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name VECTOR_WAVEFORM_FILE Waveform.vwf
+set_global_assignment -name VHDL_FILE muxSalidas.vhd
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to clk
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to rst
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to salida[7]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to salida[6]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to salida[5]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to salida[4]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to salida[3]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to salida[2]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to salida[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to salida[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to salida
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to sw[1]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to sw[0]
+set_instance_assignment -name IO_STANDARD "3.3-V LVTTL" -to sw
+set_location_assignment PIN_P11 -to clk
+set_location_assignment PIN_B8 -to rst
+set_location_assignment PIN_D14 -to salida[7]
+set_location_assignment PIN_E14 -to salida[6]
+set_location_assignment PIN_C13 -to salida[5]
+set_location_assignment PIN_D13 -to salida[4]
+set_location_assignment PIN_C10 -to sw[0]
+set_location_assignment PIN_C11 -to sw[1]
+set_location_assignment PIN_A8 -to salida[0]
+set_location_assignment PIN_A9 -to salida[1]
+set_location_assignment PIN_A10 -to salida[2]
+set_location_assignment PIN_B10 -to salida[3]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
