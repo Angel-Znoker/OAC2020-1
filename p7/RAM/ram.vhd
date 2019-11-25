@@ -34,7 +34,7 @@ architecture Behavioral of ram is
 		
 		-- LDAA 03
 		mem(0) <= X"86";
-		mem(1) <= X"03";
+		mem(1) <= X"05";
 		-- STAA 24
 		mem(2) <= X"A7";
 		mem(3) <= X"24";

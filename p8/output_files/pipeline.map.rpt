@@ -1,0 +1,1004 @@
+Analysis & Synthesis report for pipeline
+Wed Nov 13 07:22:19 2019
+Quartus Prime Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. User-Specified and Inferred Latches
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Inverted Register Statistics
+ 13. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 14. Post-Synthesis Netlist Statistics for Top Partition
+ 15. Elapsed Time Per Partition
+ 16. Analysis & Synthesis Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2017  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                     ;
++------------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Wed Nov 13 07:22:19 2019       ;
+; Quartus Prime Version              ; 17.1.0 Build 590 10/25/2017 SJ Lite Edition ;
+; Revision Name                      ; pipeline                                    ;
+; Top-level Entity Name              ; pipeline                                    ;
+; Family                             ; MAX 10                                      ;
+; Total logic elements               ; 247                                         ;
+;     Total combinational functions  ; 212                                         ;
+;     Dedicated logic registers      ; 130                                         ;
+; Total registers                    ; 130                                         ;
+; Total pins                         ; 18                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
+; UFM blocks                         ; 0                                           ;
+; ADC blocks                         ; 0                                           ;
++------------------------------------+---------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                     ; 10M50DAF484C7G     ;                    ;
+; Top-level entity name                                                      ; pipeline           ; pipeline           ;
+; Family name                                                                ; MAX 10             ; Cyclone V          ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                              ; Enable             ; Enable             ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; Power Optimization During Synthesis                                        ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
++------------------------------------------+
+; Parallel Compilation                     ;
++----------------------------+-------------+
+; Processors                 ; Number      ;
++----------------------------+-------------+
+; Number detected on machine ; 2           ;
+; Maximum allowed            ; 2           ;
+;                            ;             ;
+; Average used               ; 1.00        ;
+; Maximum used               ; 2           ;
+;                            ;             ;
+; Usage by Processor         ; % Time Used ;
+;     Processor 1            ; 100.0%      ;
+;     Processor 2            ;   0.0%      ;
++----------------------------+-------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                      ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                            ; Library ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------+---------+
+; upa.vhd                          ; yes             ; User VHDL File                     ; C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/upa.vhd            ;         ;
+; u_control.vhd                    ; yes             ; User VHDL File                     ; C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd      ;         ;
+; sumador.vhd                      ; yes             ; User VHDL File                     ; C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/sumador.vhd        ;         ;
+; registro_pc.vhd                  ; yes             ; User VHDL File                     ; C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/registro_pc.vhd    ;         ;
+; registro_inst.vhd                ; yes             ; User VHDL File                     ; C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/registro_inst.vhd  ;         ;
+; registro_esp.vhdl                ; yes             ; User VHDL File                     ; C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/registro_esp.vhdl  ;         ;
+; registro_1.vhd                   ; yes             ; User VHDL File                     ; C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/registro_1.vhd     ;         ;
+; reg_acoplo_4.vhd                 ; yes             ; User VHDL File                     ; C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/reg_acoplo_4.vhd   ;         ;
+; reg_acoplo_3.vhd                 ; yes             ; User VHDL File                     ; C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/reg_acoplo_3.vhd   ;         ;
+; mux_src.vhd                      ; yes             ; User VHDL File                     ; C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_src.vhd        ;         ;
+; mux_result.vhd                   ; yes             ; User VHDL File                     ; C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_result.vhd     ;         ;
+; mux_regs.vhd                     ; yes             ; User VHDL File                     ; C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_regs.vhd       ;         ;
+; mux_pc.vhdl                      ; yes             ; User VHDL File                     ; C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_pc.vhdl        ;         ;
+; mux_dirw.vhd                     ; yes             ; User VHDL File                     ; C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_dirw.vhd       ;         ;
+; mux_dir.vhd                      ; yes             ; User VHDL File                     ; C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_dir.vhd        ;         ;
+; mux_1.vhd                        ; yes             ; User VHDL File                     ; C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_1.vhd          ;         ;
+; memoria_inst.vhd                 ; yes             ; User VHDL File                     ; C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/memoria_inst.vhd   ;         ;
+; memoria_datos.vhd                ; yes             ; User VHDL File                     ; C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/memoria_datos.vhd  ;         ;
+; incrementador.vhdl               ; yes             ; User VHDL File                     ; C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/incrementador.vhdl ;         ;
+; ext_signo.vhd                    ; yes             ; User VHDL File                     ; C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/ext_signo.vhd      ;         ;
+; deco_regw.vhd                    ; yes             ; User VHDL File                     ; C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/deco_regw.vhd      ;         ;
+; ccr.vhd                          ; yes             ; User VHDL File                     ; C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/ccr.vhd            ;         ;
+; branch.vhd                       ; yes             ; User VHDL File                     ; C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/branch.vhd         ;         ;
+; registros.bdf                    ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/registros.bdf      ;         ;
+; etapa1.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/etapa1.bdf         ;         ;
+; etapa2.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/etapa2.bdf         ;         ;
+; etapa3.bdf                       ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/etapa3.bdf         ;         ;
+; pipeline.bdf                     ; yes             ; User Block Diagram/Schematic File  ; C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/pipeline.bdf       ;         ;
+; divisor.vhd                      ; yes             ; User VHDL File                     ; C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/divisor.vhd        ;         ;
++----------------------------------+-----------------+------------------------------------+-------------------------------------------------------------------------+---------+
+
+
++-----------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                     ;
++---------------------------------------------+-------------------+
+; Resource                                    ; Usage             ;
++---------------------------------------------+-------------------+
+; Estimated Total logic elements              ; 247               ;
+;                                             ;                   ;
+; Total combinational functions               ; 212               ;
+; Logic element usage by number of LUT inputs ;                   ;
+;     -- 4 input functions                    ; 100               ;
+;     -- 3 input functions                    ; 57                ;
+;     -- <=2 input functions                  ; 55                ;
+;                                             ;                   ;
+; Logic elements by mode                      ;                   ;
+;     -- normal mode                          ; 167               ;
+;     -- arithmetic mode                      ; 45                ;
+;                                             ;                   ;
+; Total registers                             ; 130               ;
+;     -- Dedicated logic registers            ; 130               ;
+;     -- I/O registers                        ; 0                 ;
+;                                             ;                   ;
+; I/O pins                                    ; 18                ;
+;                                             ;                   ;
+; Embedded Multiplier 9-bit elements          ; 0                 ;
+;                                             ;                   ;
+; Maximum fan-out node                        ; divisor:inst1|div ;
+; Maximum fan-out                             ; 106               ;
+; Total fan-out                               ; 1119              ;
+; Average fan-out                             ; 2.96              ;
++---------------------------------------------+-------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                ;
++-------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------+---------------+--------------+
+; Compilation Hierarchy Node    ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                            ; Entity Name   ; Library Name ;
++-------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------+---------------+--------------+
+; |pipeline                     ; 212 (0)             ; 130 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 18   ; 0            ; 0          ; |pipeline                                                      ; pipeline      ; work         ;
+;    |divisor:inst1|            ; 41 (41)             ; 25 (25)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|divisor:inst1                                        ; divisor       ; work         ;
+;    |etapa1:inst|              ; 17 (0)              ; 14 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|etapa1:inst                                          ; etapa1        ; work         ;
+;       |memoria_inst:inst1|    ; 11 (11)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|etapa1:inst|memoria_inst:inst1                       ; memoria_inst  ; work         ;
+;       |registro_inst:inst5|   ; 0 (0)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|etapa1:inst|registro_inst:inst5                      ; registro_inst ; work         ;
+;       |registro_pc:inst3|     ; 6 (6)               ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|etapa1:inst|registro_pc:inst3                        ; registro_pc   ; work         ;
+;    |etapa2:inst3|             ; 67 (0)              ; 72 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|etapa2:inst3                                         ; etapa2        ; work         ;
+;       |mux_src:inst202|       ; 34 (34)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|etapa2:inst3|mux_src:inst202                         ; mux_src       ; work         ;
+;       |reg_acoplo_3:inst10|   ; 1 (1)               ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|etapa2:inst3|reg_acoplo_3:inst10                     ; reg_acoplo_3  ; work         ;
+;       |registro_pc:inst700|   ; 0 (0)               ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|etapa2:inst3|registro_pc:inst700                     ; registro_pc   ; work         ;
+;       |registro_pc:inst8|     ; 0 (0)               ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|etapa2:inst3|registro_pc:inst8                       ; registro_pc   ; work         ;
+;       |registros:inst700666|  ; 2 (0)               ; 32 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|etapa2:inst3|registros:inst700666                    ; registros     ; work         ;
+;          |deco_regw:inst1000| ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|etapa2:inst3|registros:inst700666|deco_regw:inst1000 ; deco_regw     ; work         ;
+;          |registro_esp:ACCA|  ; 0 (0)               ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|etapa2:inst3|registros:inst700666|registro_esp:ACCA  ; registro_esp  ; work         ;
+;          |registro_esp:ACCB|  ; 0 (0)               ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|etapa2:inst3|registros:inst700666|registro_esp:ACCB  ; registro_esp  ; work         ;
+;       |u_control:inst206|     ; 30 (30)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|etapa2:inst3|u_control:inst206                       ; u_control     ; work         ;
+;    |etapa3:inst2|             ; 87 (0)              ; 19 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|etapa3:inst2                                         ; etapa3        ; work         ;
+;       |ccr:inst3|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|etapa3:inst2|ccr:inst3                               ; ccr           ; work         ;
+;       |mux_result:inst2|      ; 16 (16)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|etapa3:inst2|mux_result:inst2                        ; mux_result    ; work         ;
+;       |reg_acoplo_4:inst107|  ; 0 (0)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|etapa3:inst2|reg_acoplo_4:inst107                    ; reg_acoplo_4  ; work         ;
+;       |registro_1:inst100|    ; 0 (0)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|etapa3:inst2|registro_1:inst100                      ; registro_1    ; work         ;
+;       |registro_pc:inst6|     ; 0 (0)               ; 16 (16)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|etapa3:inst2|registro_pc:inst6                       ; registro_pc   ; work         ;
+;       |upa:inst|              ; 70 (70)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |pipeline|etapa3:inst2|upa:inst                                ; upa           ; work         ;
++-------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------------------------------+---------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; User-Specified and Inferred Latches                                                                                            ;
++--------------------------------------------------------+----------------------------------------------+------------------------+
+; Latch Name                                             ; Latch Enable Signal                          ; Free of Timing Hazards ;
++--------------------------------------------------------+----------------------------------------------+------------------------+
+; etapa3:inst2|mux_result:inst2|datow[15]                ; VCC                                          ; yes                    ;
+; etapa3:inst2|mux_result:inst2|datow[14]                ; VCC                                          ; yes                    ;
+; etapa3:inst2|mux_result:inst2|datow[13]                ; VCC                                          ; yes                    ;
+; etapa3:inst2|mux_result:inst2|datow[12]                ; VCC                                          ; yes                    ;
+; etapa3:inst2|mux_result:inst2|datow[11]                ; VCC                                          ; yes                    ;
+; etapa3:inst2|mux_result:inst2|datow[10]                ; VCC                                          ; yes                    ;
+; etapa3:inst2|mux_result:inst2|datow[9]                 ; VCC                                          ; yes                    ;
+; etapa3:inst2|mux_result:inst2|datow[8]                 ; VCC                                          ; yes                    ;
+; etapa3:inst2|mux_result:inst2|datow[7]                 ; VCC                                          ; yes                    ;
+; etapa3:inst2|mux_result:inst2|datow[6]                 ; VCC                                          ; yes                    ;
+; etapa3:inst2|mux_result:inst2|datow[5]                 ; VCC                                          ; yes                    ;
+; etapa3:inst2|mux_result:inst2|datow[4]                 ; VCC                                          ; yes                    ;
+; etapa3:inst2|mux_result:inst2|datow[3]                 ; VCC                                          ; yes                    ;
+; etapa3:inst2|mux_result:inst2|datow[2]                 ; VCC                                          ; yes                    ;
+; etapa3:inst2|mux_result:inst2|datow[1]                 ; VCC                                          ; yes                    ;
+; etapa3:inst2|mux_result:inst2|datow[0]                 ; VCC                                          ; yes                    ;
+; etapa3:inst2|upa:inst|opres[15]                        ; etapa3:inst2|upa:inst|opres[15]              ; yes                    ;
+; etapa2:inst3|u_control:inst206|selregw[2]              ; GND                                          ; yes                    ;
+; etapa2:inst3|u_control:inst206|selregw[0]              ; GND                                          ; yes                    ;
+; etapa3:inst2|upa:inst|opres[14]                        ; etapa3:inst2|upa:inst|opres[15]              ; yes                    ;
+; etapa3:inst2|upa:inst|opres[13]                        ; etapa3:inst2|upa:inst|opres[15]              ; yes                    ;
+; etapa3:inst2|upa:inst|opres[12]                        ; etapa3:inst2|upa:inst|opres[15]              ; yes                    ;
+; etapa3:inst2|upa:inst|opres[11]                        ; etapa3:inst2|upa:inst|opres[15]              ; yes                    ;
+; etapa3:inst2|upa:inst|opres[10]                        ; etapa3:inst2|upa:inst|opres[15]              ; yes                    ;
+; etapa3:inst2|upa:inst|opres[9]                         ; etapa3:inst2|upa:inst|opres[15]              ; yes                    ;
+; etapa3:inst2|upa:inst|opres[8]                         ; etapa3:inst2|upa:inst|opres[15]              ; yes                    ;
+; etapa3:inst2|upa:inst|opres[7]                         ; etapa3:inst2|upa:inst|opres[15]              ; yes                    ;
+; etapa3:inst2|upa:inst|opres[6]                         ; etapa3:inst2|upa:inst|opres[15]              ; yes                    ;
+; etapa3:inst2|upa:inst|opres[5]                         ; etapa3:inst2|upa:inst|opres[15]              ; yes                    ;
+; etapa3:inst2|upa:inst|opres[4]                         ; etapa3:inst2|upa:inst|opres[15]              ; yes                    ;
+; etapa3:inst2|upa:inst|opres[3]                         ; etapa3:inst2|upa:inst|opres[15]              ; yes                    ;
+; etapa3:inst2|upa:inst|opres[2]                         ; etapa3:inst2|upa:inst|opres[15]              ; yes                    ;
+; etapa3:inst2|upa:inst|opres[1]                         ; etapa3:inst2|upa:inst|opres[15]              ; yes                    ;
+; etapa3:inst2|upa:inst|opres[0]                         ; etapa3:inst2|upa:inst|opres[15]              ; yes                    ;
+; etapa3:inst2|ccr:inst3|ci                              ; etapa2:inst3|reg_acoplo_3:inst10|selfalgs[1] ; yes                    ;
+; etapa2:inst3|u_control:inst206|selresult[0]            ; GND                                          ; yes                    ;
+; etapa2:inst3|mux_src:inst202|OP2[15]                   ; VCC                                          ; yes                    ;
+; etapa2:inst3|mux_src:inst202|OP1[15]                   ; VCC                                          ; yes                    ;
+; etapa2:inst3|u_control:inst206|selop[2]                ; GND                                          ; yes                    ;
+; etapa2:inst3|mux_src:inst202|OP2[14]                   ; VCC                                          ; yes                    ;
+; etapa2:inst3|mux_src:inst202|OP1[14]                   ; VCC                                          ; yes                    ;
+; etapa2:inst3|mux_src:inst202|OP2[13]                   ; VCC                                          ; yes                    ;
+; etapa2:inst3|mux_src:inst202|OP1[13]                   ; VCC                                          ; yes                    ;
+; etapa2:inst3|mux_src:inst202|OP2[12]                   ; VCC                                          ; yes                    ;
+; etapa2:inst3|mux_src:inst202|OP1[12]                   ; VCC                                          ; yes                    ;
+; etapa2:inst3|mux_src:inst202|OP2[11]                   ; VCC                                          ; yes                    ;
+; etapa2:inst3|mux_src:inst202|OP1[11]                   ; VCC                                          ; yes                    ;
+; etapa2:inst3|mux_src:inst202|OP2[10]                   ; VCC                                          ; yes                    ;
+; etapa2:inst3|mux_src:inst202|OP1[10]                   ; VCC                                          ; yes                    ;
+; etapa2:inst3|mux_src:inst202|OP2[9]                    ; VCC                                          ; yes                    ;
+; etapa2:inst3|mux_src:inst202|OP1[9]                    ; VCC                                          ; yes                    ;
+; etapa2:inst3|mux_src:inst202|OP2[8]                    ; VCC                                          ; yes                    ;
+; etapa2:inst3|mux_src:inst202|OP1[8]                    ; VCC                                          ; yes                    ;
+; etapa2:inst3|mux_src:inst202|OP2[7]                    ; VCC                                          ; yes                    ;
+; etapa2:inst3|mux_src:inst202|OP1[7]                    ; VCC                                          ; yes                    ;
+; etapa2:inst3|mux_src:inst202|OP2[6]                    ; VCC                                          ; yes                    ;
+; etapa2:inst3|mux_src:inst202|OP1[6]                    ; VCC                                          ; yes                    ;
+; etapa2:inst3|mux_src:inst202|OP2[5]                    ; VCC                                          ; yes                    ;
+; etapa2:inst3|mux_src:inst202|OP1[5]                    ; VCC                                          ; yes                    ;
+; etapa2:inst3|mux_src:inst202|OP2[4]                    ; VCC                                          ; yes                    ;
+; etapa2:inst3|mux_src:inst202|OP1[4]                    ; VCC                                          ; yes                    ;
+; etapa2:inst3|mux_src:inst202|OP2[3]                    ; VCC                                          ; yes                    ;
+; etapa2:inst3|mux_src:inst202|OP1[3]                    ; VCC                                          ; yes                    ;
+; etapa2:inst3|mux_src:inst202|OP2[2]                    ; VCC                                          ; yes                    ;
+; etapa2:inst3|mux_src:inst202|OP1[2]                    ; VCC                                          ; yes                    ;
+; etapa2:inst3|mux_src:inst202|OP2[1]                    ; VCC                                          ; yes                    ;
+; etapa2:inst3|mux_src:inst202|OP1[1]                    ; VCC                                          ; yes                    ;
+; etapa2:inst3|mux_src:inst202|OP2[0]                    ; VCC                                          ; yes                    ;
+; etapa2:inst3|mux_src:inst202|OP1[0]                    ; VCC                                          ; yes                    ;
+; etapa2:inst3|u_control:inst206|selc                    ; GND                                          ; yes                    ;
+; etapa3:inst2|upa:inst|opres[16]                        ; etapa3:inst2|upa:inst|opres[15]              ; yes                    ;
+; etapa2:inst3|u_control:inst206|selop[0]                ; GND                                          ; yes                    ;
+; etapa2:inst3|registros:inst700666|mux_regs:inst|D2[15] ; VCC                                          ; yes                    ;
+; etapa2:inst3|u_control:inst206|selsrc[0]               ; GND                                          ; yes                    ;
+; etapa2:inst3|u_control:inst206|selsrc[1]               ; GND                                          ; yes                    ;
+; etapa2:inst3|registros:inst700666|mux_regs:inst|D1[15] ; VCC                                          ; yes                    ;
+; etapa2:inst3|registros:inst700666|mux_regs:inst|D2[14] ; VCC                                          ; yes                    ;
+; etapa2:inst3|registros:inst700666|mux_regs:inst|D1[14] ; VCC                                          ; yes                    ;
+; etapa2:inst3|registros:inst700666|mux_regs:inst|D2[13] ; VCC                                          ; yes                    ;
+; etapa2:inst3|registros:inst700666|mux_regs:inst|D1[13] ; VCC                                          ; yes                    ;
+; etapa2:inst3|registros:inst700666|mux_regs:inst|D2[12] ; VCC                                          ; yes                    ;
+; etapa2:inst3|registros:inst700666|mux_regs:inst|D1[12] ; VCC                                          ; yes                    ;
+; etapa2:inst3|registros:inst700666|mux_regs:inst|D2[11] ; VCC                                          ; yes                    ;
+; etapa2:inst3|registros:inst700666|mux_regs:inst|D1[11] ; VCC                                          ; yes                    ;
+; etapa2:inst3|registros:inst700666|mux_regs:inst|D2[10] ; VCC                                          ; yes                    ;
+; etapa2:inst3|registros:inst700666|mux_regs:inst|D1[10] ; VCC                                          ; yes                    ;
+; etapa2:inst3|registros:inst700666|mux_regs:inst|D2[9]  ; VCC                                          ; yes                    ;
+; etapa2:inst3|registros:inst700666|mux_regs:inst|D1[9]  ; VCC                                          ; yes                    ;
+; etapa2:inst3|registros:inst700666|mux_regs:inst|D2[8]  ; VCC                                          ; yes                    ;
+; etapa2:inst3|registros:inst700666|mux_regs:inst|D1[8]  ; VCC                                          ; yes                    ;
+; etapa2:inst3|registros:inst700666|mux_regs:inst|D2[7]  ; VCC                                          ; yes                    ;
+; etapa2:inst3|registros:inst700666|mux_regs:inst|D1[7]  ; VCC                                          ; yes                    ;
+; etapa2:inst3|registros:inst700666|mux_regs:inst|D2[6]  ; VCC                                          ; yes                    ;
+; etapa2:inst3|registros:inst700666|mux_regs:inst|D1[6]  ; VCC                                          ; yes                    ;
+; etapa2:inst3|registros:inst700666|mux_regs:inst|D2[5]  ; VCC                                          ; yes                    ;
+; etapa2:inst3|registros:inst700666|mux_regs:inst|D1[5]  ; VCC                                          ; yes                    ;
+; etapa2:inst3|registros:inst700666|mux_regs:inst|D2[4]  ; VCC                                          ; yes                    ;
+; etapa2:inst3|registros:inst700666|mux_regs:inst|D1[4]  ; VCC                                          ; yes                    ;
+; etapa2:inst3|registros:inst700666|mux_regs:inst|D2[3]  ; VCC                                          ; yes                    ;
+; etapa2:inst3|registros:inst700666|mux_regs:inst|D1[3]  ; VCC                                          ; yes                    ;
+; Number of user-specified and inferred latches = 109    ;                                              ;                        ;
++--------------------------------------------------------+----------------------------------------------+------------------------+
+Table restricted to first 100 entries. Note: All latches listed above may not be present at the end of synthesis due to various synthesis optimizations.
+
+
++----------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                               ;
++------------------------------------------------------------------+---------------------------------------------------------------+
+; Register name                                                    ; Reason for Removal                                            ;
++------------------------------------------------------------------+---------------------------------------------------------------+
+; etapa1:inst|registro_pc:inst4|SALIDA[0..15]                      ; Lost fanout                                                   ;
+; etapa2:inst3|registros:inst700666|registro_esp:AUX|SALIDA[1..15] ; Lost fanout                                                   ;
+; etapa2:inst3|registros:inst700666|registro_esp:IX|SALIDA[0]      ; Lost fanout                                                   ;
+; etapa2:inst3|registros:inst700666|registro_esp:AUX|SALIDA[0]     ; Lost fanout                                                   ;
+; etapa2:inst3|registros:inst700666|registro_esp:IX|SALIDA[1..15]  ; Lost fanout                                                   ;
+; etapa2:inst3|reg_acoplo_3:inst10|selop[1,3]                      ; Stuck at GND due to stuck port data_in                        ;
+; etapa2:inst3|reg_acoplo_3:inst10|selresult[1]                    ; Stuck at GND due to stuck port data_in                        ;
+; etapa2:inst3|reg_acoplo_3:inst10|cadj                            ; Stuck at GND due to stuck port data_in                        ;
+; etapa2:inst3|reg_acoplo_3:inst10|selfalgs[2,3]                   ; Stuck at GND due to stuck port data_in                        ;
+; etapa2:inst3|reg_acoplo_3:inst10|selbranch[0..2]                 ; Stuck at GND due to stuck port data_in                        ;
+; etapa2:inst3|reg_acoplo_3:inst10|selregw[1]                      ; Stuck at GND due to stuck port data_in                        ;
+; etapa2:inst3|reg_acoplo_3:inst10|memw                            ; Stuck at GND due to stuck port data_in                        ;
+; etapa2:inst3|reg_acoplo_3:inst10|seldirw[0,1]                    ; Stuck at GND due to stuck port data_in                        ;
+; etapa3:inst2|reg_acoplo_4:inst107|selregw[1]                     ; Stuck at GND due to stuck port data_in                        ;
+; etapa3:inst2|reg_acoplo_4:inst107|memw                           ; Stuck at GND due to stuck port data_in                        ;
+; etapa3:inst2|reg_acoplo_4:inst107|seldirw[0,1]                   ; Stuck at GND due to stuck port data_in                        ;
+; etapa2:inst3|registros:inst700666|registro_esp:SP|SALIDA[0..15]  ; Stuck at GND due to stuck port clock_enable                   ;
+; etapa2:inst3|registros:inst700666|registro_esp:IY|SALIDA[0..15]  ; Stuck at GND due to stuck port clock_enable                   ;
+; etapa3:inst2|registro_pc:inst5|SALIDA[0..15]                     ; Lost fanout                                                   ;
+; etapa2:inst3|registro_pc:inst9|SALIDA[0..15]                     ; Lost fanout                                                   ;
+; etapa1:inst|registro_inst:inst5|valor_interno[0,3..15,24..31]    ; Stuck at GND due to stuck port data_in                        ;
+; etapa2:inst3|reg_acoplo_3:inst10|selfalgs[0]                     ; Lost fanout                                                   ;
+; etapa1:inst|registro_inst:inst5|valor_interno[2]                 ; Merged with etapa1:inst|registro_inst:inst5|valor_interno[21] ;
+; etapa1:inst|registro_inst:inst5|valor_interno[19]                ; Merged with etapa1:inst|registro_inst:inst5|valor_interno[20] ;
+; etapa1:inst|registro_pc:inst3|SALIDA[6..15]                      ; Lost fanout                                                   ;
+; Total Number of Removed Registers = 164                          ;                                                               ;
++------------------------------------------------------------------+---------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                                     ;
++-----------------------------------------------+---------------------------+-------------------------------------------------------------------------------------+
+; Register name                                 ; Reason for Removal        ; Registers Removed due to This Register                                              ;
++-----------------------------------------------+---------------------------+-------------------------------------------------------------------------------------+
+; etapa2:inst3|reg_acoplo_3:inst10|selregw[1]   ; Stuck at GND              ; etapa3:inst2|reg_acoplo_4:inst107|selregw[1],                                       ;
+;                                               ; due to stuck port data_in ; etapa2:inst3|registros:inst700666|registro_esp:SP|SALIDA[0],                        ;
+;                                               ;                           ; etapa2:inst3|registros:inst700666|registro_esp:SP|SALIDA[1],                        ;
+;                                               ;                           ; etapa2:inst3|registros:inst700666|registro_esp:SP|SALIDA[2],                        ;
+;                                               ;                           ; etapa2:inst3|registros:inst700666|registro_esp:SP|SALIDA[3],                        ;
+;                                               ;                           ; etapa2:inst3|registros:inst700666|registro_esp:SP|SALIDA[4],                        ;
+;                                               ;                           ; etapa2:inst3|registros:inst700666|registro_esp:SP|SALIDA[5],                        ;
+;                                               ;                           ; etapa2:inst3|registros:inst700666|registro_esp:SP|SALIDA[6],                        ;
+;                                               ;                           ; etapa2:inst3|registros:inst700666|registro_esp:SP|SALIDA[7],                        ;
+;                                               ;                           ; etapa2:inst3|registros:inst700666|registro_esp:SP|SALIDA[8],                        ;
+;                                               ;                           ; etapa2:inst3|registros:inst700666|registro_esp:SP|SALIDA[9],                        ;
+;                                               ;                           ; etapa2:inst3|registros:inst700666|registro_esp:SP|SALIDA[10],                       ;
+;                                               ;                           ; etapa2:inst3|registros:inst700666|registro_esp:SP|SALIDA[11],                       ;
+;                                               ;                           ; etapa2:inst3|registros:inst700666|registro_esp:SP|SALIDA[12],                       ;
+;                                               ;                           ; etapa2:inst3|registros:inst700666|registro_esp:SP|SALIDA[13],                       ;
+;                                               ;                           ; etapa2:inst3|registros:inst700666|registro_esp:SP|SALIDA[14],                       ;
+;                                               ;                           ; etapa2:inst3|registros:inst700666|registro_esp:SP|SALIDA[15],                       ;
+;                                               ;                           ; etapa2:inst3|registros:inst700666|registro_esp:IY|SALIDA[0],                        ;
+;                                               ;                           ; etapa2:inst3|registros:inst700666|registro_esp:IY|SALIDA[1],                        ;
+;                                               ;                           ; etapa2:inst3|registros:inst700666|registro_esp:IY|SALIDA[2],                        ;
+;                                               ;                           ; etapa2:inst3|registros:inst700666|registro_esp:IY|SALIDA[3],                        ;
+;                                               ;                           ; etapa2:inst3|registros:inst700666|registro_esp:IY|SALIDA[4],                        ;
+;                                               ;                           ; etapa2:inst3|registros:inst700666|registro_esp:IY|SALIDA[5],                        ;
+;                                               ;                           ; etapa2:inst3|registros:inst700666|registro_esp:IY|SALIDA[6],                        ;
+;                                               ;                           ; etapa2:inst3|registros:inst700666|registro_esp:IY|SALIDA[7],                        ;
+;                                               ;                           ; etapa2:inst3|registros:inst700666|registro_esp:IY|SALIDA[8],                        ;
+;                                               ;                           ; etapa2:inst3|registros:inst700666|registro_esp:IY|SALIDA[9],                        ;
+;                                               ;                           ; etapa2:inst3|registros:inst700666|registro_esp:IY|SALIDA[10],                       ;
+;                                               ;                           ; etapa2:inst3|registros:inst700666|registro_esp:IY|SALIDA[11],                       ;
+;                                               ;                           ; etapa2:inst3|registros:inst700666|registro_esp:IY|SALIDA[12],                       ;
+;                                               ;                           ; etapa2:inst3|registros:inst700666|registro_esp:IY|SALIDA[13],                       ;
+;                                               ;                           ; etapa2:inst3|registros:inst700666|registro_esp:IY|SALIDA[14],                       ;
+;                                               ;                           ; etapa2:inst3|registros:inst700666|registro_esp:IY|SALIDA[15]                        ;
+; etapa2:inst3|reg_acoplo_3:inst10|selresult[1] ; Stuck at GND              ; etapa2:inst3|registro_pc:inst9|SALIDA[15],                                          ;
+;                                               ; due to stuck port data_in ; etapa2:inst3|registro_pc:inst9|SALIDA[14],                                          ;
+;                                               ;                           ; etapa2:inst3|registro_pc:inst9|SALIDA[13],                                          ;
+;                                               ;                           ; etapa2:inst3|registro_pc:inst9|SALIDA[12],                                          ;
+;                                               ;                           ; etapa2:inst3|registro_pc:inst9|SALIDA[11],                                          ;
+;                                               ;                           ; etapa2:inst3|registro_pc:inst9|SALIDA[10],                                          ;
+;                                               ;                           ; etapa2:inst3|registro_pc:inst9|SALIDA[9], etapa2:inst3|registro_pc:inst9|SALIDA[8], ;
+;                                               ;                           ; etapa2:inst3|registro_pc:inst9|SALIDA[7], etapa2:inst3|registro_pc:inst9|SALIDA[6], ;
+;                                               ;                           ; etapa2:inst3|registro_pc:inst9|SALIDA[5], etapa2:inst3|registro_pc:inst9|SALIDA[4], ;
+;                                               ;                           ; etapa2:inst3|registro_pc:inst9|SALIDA[3], etapa2:inst3|registro_pc:inst9|SALIDA[2], ;
+;                                               ;                           ; etapa2:inst3|registro_pc:inst9|SALIDA[1], etapa2:inst3|registro_pc:inst9|SALIDA[0]  ;
+; etapa2:inst3|reg_acoplo_3:inst10|seldirw[1]   ; Stuck at GND              ; etapa3:inst2|reg_acoplo_4:inst107|seldirw[1],                                       ;
+;                                               ; due to stuck port data_in ; etapa3:inst2|registro_pc:inst5|SALIDA[15],                                          ;
+;                                               ;                           ; etapa3:inst2|registro_pc:inst5|SALIDA[14],                                          ;
+;                                               ;                           ; etapa3:inst2|registro_pc:inst5|SALIDA[13],                                          ;
+;                                               ;                           ; etapa3:inst2|registro_pc:inst5|SALIDA[12],                                          ;
+;                                               ;                           ; etapa3:inst2|registro_pc:inst5|SALIDA[11],                                          ;
+;                                               ;                           ; etapa3:inst2|registro_pc:inst5|SALIDA[10],                                          ;
+;                                               ;                           ; etapa3:inst2|registro_pc:inst5|SALIDA[9], etapa3:inst2|registro_pc:inst5|SALIDA[8], ;
+;                                               ;                           ; etapa3:inst2|registro_pc:inst5|SALIDA[7], etapa3:inst2|registro_pc:inst5|SALIDA[6], ;
+;                                               ;                           ; etapa3:inst2|registro_pc:inst5|SALIDA[5], etapa3:inst2|registro_pc:inst5|SALIDA[4], ;
+;                                               ;                           ; etapa3:inst2|registro_pc:inst5|SALIDA[3], etapa3:inst2|registro_pc:inst5|SALIDA[2], ;
+;                                               ;                           ; etapa3:inst2|registro_pc:inst5|SALIDA[1]                                            ;
+; etapa2:inst3|reg_acoplo_3:inst10|memw         ; Stuck at GND              ; etapa3:inst2|reg_acoplo_4:inst107|memw, etapa3:inst2|registro_pc:inst5|SALIDA[0]    ;
+;                                               ; due to stuck port data_in ;                                                                                     ;
+; etapa2:inst3|reg_acoplo_3:inst10|cadj         ; Stuck at GND              ; etapa2:inst3|reg_acoplo_3:inst10|selfalgs[0]                                        ;
+;                                               ; due to stuck port data_in ;                                                                                     ;
+; etapa2:inst3|reg_acoplo_3:inst10|seldirw[0]   ; Stuck at GND              ; etapa3:inst2|reg_acoplo_4:inst107|seldirw[0]                                        ;
+;                                               ; due to stuck port data_in ;                                                                                     ;
++-----------------------------------------------+---------------------------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 130   ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 6     ;
+; Number of registers using Asynchronous Clear ; 105   ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 32    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------+
+; Inverted Register Statistics                     ;
++----------------------------------------+---------+
+; Inverted Register                      ; Fan out ;
++----------------------------------------+---------+
+; etapa2:inst3|reg_acoplo_3:inst10|vf    ; 1       ;
+; Total number of inverted registers = 1 ;         ;
++----------------------------------------+---------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; No         ; |pipeline|etapa3:inst2|upa:inst|opres[11]            ;
+; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |pipeline|etapa2:inst3|u_control:inst206|selfalgs[0] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |pipeline|etapa2:inst3|mux_src:inst202|OP2[2]        ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
+
+
++-----------------------------------------------------+
+; Post-Synthesis Netlist Statistics for Top Partition ;
++-----------------------+-----------------------------+
+; Type                  ; Count                       ;
++-----------------------+-----------------------------+
+; boundary_port         ; 18                          ;
+; cycloneiii_ff         ; 130                         ;
+;     CLR               ; 67                          ;
+;     CLR SLD           ; 6                           ;
+;     ENA CLR           ; 32                          ;
+;     plain             ; 25                          ;
+; cycloneiii_lcell_comb ; 212                         ;
+;     arith             ; 45                          ;
+;         2 data inputs ; 28                          ;
+;         3 data inputs ; 17                          ;
+;     normal            ; 167                         ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 23                          ;
+;         3 data inputs ; 40                          ;
+;         4 data inputs ; 100                         ;
+;                       ;                             ;
+; Max LUT depth         ; 5.40                        ;
+; Average LUT depth     ; 2.80                        ;
++-----------------------+-----------------------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:05     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus Prime Analysis & Synthesis
+    Info: Version 17.1.0 Build 590 10/25/2017 SJ Lite Edition
+    Info: Processing started: Wed Nov 13 13:20:53 2019
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off pipeline -c pipeline
+Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 2 design units, including 1 entities, in source file upa.vhd
+    Info (12022): Found design unit 1: upa-Behavioral File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/upa.vhd Line: 20
+    Info (12023): Found entity 1: upa File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/upa.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file u_control.vhd
+    Info (12022): Found design unit 1: u_control-Behavioral File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 28
+    Info (12023): Found entity 1: u_control File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file sumador.vhd
+    Info (12022): Found design unit 1: sumador-Behavioral File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/sumador.vhd Line: 14
+    Info (12023): Found entity 1: sumador File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/sumador.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file registro_pc.vhd
+    Info (12022): Found design unit 1: registro_pc-Behavioral File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/registro_pc.vhd Line: 11
+    Info (12023): Found entity 1: registro_pc File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/registro_pc.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file registro_inst.vhd
+    Info (12022): Found design unit 1: registro_inst-Behavioral File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/registro_inst.vhd Line: 13
+    Info (12023): Found entity 1: registro_inst File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/registro_inst.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file registro_esp.vhdl
+    Info (12022): Found design unit 1: registro_esp-Behavioral File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/registro_esp.vhdl Line: 12
+    Info (12023): Found entity 1: registro_esp File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/registro_esp.vhdl Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file registro_1.vhd
+    Info (12022): Found design unit 1: registro_1-Behavioral File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/registro_1.vhd Line: 11
+    Info (12023): Found entity 1: registro_1 File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/registro_1.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file reg_acoplo_4.vhd
+    Info (12022): Found design unit 1: reg_acoplo_4-Behavioral File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/reg_acoplo_4.vhd Line: 15
+    Info (12023): Found entity 1: reg_acoplo_4 File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/reg_acoplo_4.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file reg_acoplo_3.vhd
+    Info (12022): Found design unit 1: reg_acoplo_3-Behavioral File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/reg_acoplo_3.vhd Line: 29
+    Info (12023): Found entity 1: reg_acoplo_3 File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/reg_acoplo_3.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file mux_src.vhd
+    Info (12022): Found design unit 1: mux_src-Behavioral File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_src.vhd Line: 15
+    Info (12023): Found entity 1: mux_src File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_src.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file mux_result.vhd
+    Info (12022): Found design unit 1: mux_result-Behavioral File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_result.vhd Line: 14
+    Info (12023): Found entity 1: mux_result File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_result.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file mux_regs.vhd
+    Info (12022): Found design unit 1: mux_regs-Behavioral File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_regs.vhd Line: 16
+    Info (12023): Found entity 1: mux_regs File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_regs.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file mux_pc.vhdl
+    Info (12022): Found design unit 1: mux_pc-Behavioral File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_pc.vhdl Line: 11
+    Info (12023): Found entity 1: mux_pc File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_pc.vhdl Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file mux_dirw.vhd
+    Info (12022): Found design unit 1: mux_dirw-Behavioral File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_dirw.vhd Line: 10
+    Info (12023): Found entity 1: mux_dirw File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_dirw.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file mux_dir.vhd
+    Info (12022): Found design unit 1: mux_dir-Behavioral File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_dir.vhd Line: 12
+    Info (12023): Found entity 1: mux_dir File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_dir.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file mux_1.vhd
+    Info (12022): Found design unit 1: mux_1-Behavioral File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_1.vhd Line: 11
+    Info (12023): Found entity 1: mux_1 File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_1.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file memoria_inst.vhd
+    Info (12022): Found design unit 1: memoria_inst-Behavioral File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/memoria_inst.vhd Line: 13
+    Info (12023): Found entity 1: memoria_inst File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/memoria_inst.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file memoria_datos.vhd
+    Info (12022): Found design unit 1: memoria_datos-Behavioral File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/memoria_datos.vhd Line: 15
+    Info (12023): Found entity 1: memoria_datos File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/memoria_datos.vhd Line: 8
+Info (12021): Found 2 design units, including 1 entities, in source file incrementador.vhdl
+    Info (12022): Found design unit 1: incrementador-Behavioral File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/incrementador.vhdl Line: 11
+    Info (12023): Found entity 1: incrementador File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/incrementador.vhdl Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file ext_signo.vhd
+    Info (12022): Found design unit 1: ext_signo-Behavioral File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/ext_signo.vhd Line: 9
+    Info (12023): Found entity 1: ext_signo File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/ext_signo.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file deco_regw.vhd
+    Info (12022): Found design unit 1: deco_regw-Behavioral File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/deco_regw.vhd Line: 14
+    Info (12023): Found entity 1: deco_regw File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/deco_regw.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file ccr.vhd
+    Info (12022): Found design unit 1: ccr-Behavioral File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/ccr.vhd Line: 21
+    Info (12023): Found entity 1: ccr File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/ccr.vhd Line: 4
+Info (12021): Found 2 design units, including 1 entities, in source file branch.vhd
+    Info (12022): Found design unit 1: branch-Behavioral File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/branch.vhd Line: 16
+    Info (12023): Found entity 1: branch File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/branch.vhd Line: 6
+Info (12021): Found 1 design units, including 1 entities, in source file registros.bdf
+    Info (12023): Found entity 1: registros
+Info (12021): Found 1 design units, including 1 entities, in source file etapa1.bdf
+    Info (12023): Found entity 1: etapa1
+Info (12021): Found 1 design units, including 1 entities, in source file etapa2.bdf
+    Info (12023): Found entity 1: etapa2
+Info (12021): Found 1 design units, including 1 entities, in source file etapa3.bdf
+    Info (12023): Found entity 1: etapa3
+Info (12021): Found 1 design units, including 1 entities, in source file pipeline.bdf
+    Info (12023): Found entity 1: pipeline
+Info (12021): Found 2 design units, including 1 entities, in source file divisor.vhd
+    Info (12022): Found design unit 1: divisor-Behavioral File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/divisor.vhd Line: 12
+    Info (12023): Found entity 1: divisor File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/divisor.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file muxsalidas.vhd
+    Info (12022): Found design unit 1: muxSalidas-Behavioral File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/muxSalidas.vhd Line: 12
+    Info (12023): Found entity 1: muxSalidas File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/muxSalidas.vhd Line: 6
+Info (12021): Found 2 design units, including 1 entities, in source file display.vhd
+    Info (12022): Found design unit 1: display-Behavioral File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/display.vhd Line: 12
+    Info (12023): Found entity 1: display File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/display.vhd Line: 6
+Info (12127): Elaborating entity "pipeline" for the top level hierarchy
+Info (12128): Elaborating entity "etapa2" for hierarchy "etapa2:inst3"
+Info (12128): Elaborating entity "reg_acoplo_3" for hierarchy "etapa2:inst3|reg_acoplo_3:inst10"
+Info (12128): Elaborating entity "u_control" for hierarchy "etapa2:inst3|u_control:inst206"
+Warning (10631): VHDL Process Statement warning at u_control.vhd(30): inferring latch(es) for signal or variable "selregr", which holds its previous value in one or more paths through the process File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Warning (10631): VHDL Process Statement warning at u_control.vhd(30): inferring latch(es) for signal or variable "sels1", which holds its previous value in one or more paths through the process File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Warning (10631): VHDL Process Statement warning at u_control.vhd(30): inferring latch(es) for signal or variable "sr", which holds its previous value in one or more paths through the process File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Warning (10631): VHDL Process Statement warning at u_control.vhd(30): inferring latch(es) for signal or variable "cin", which holds its previous value in one or more paths through the process File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Warning (10631): VHDL Process Statement warning at u_control.vhd(30): inferring latch(es) for signal or variable "sels2", which holds its previous value in one or more paths through the process File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Warning (10631): VHDL Process Statement warning at u_control.vhd(30): inferring latch(es) for signal or variable "seldato", which holds its previous value in one or more paths through the process File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Warning (10631): VHDL Process Statement warning at u_control.vhd(30): inferring latch(es) for signal or variable "selsrc", which holds its previous value in one or more paths through the process File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Warning (10631): VHDL Process Statement warning at u_control.vhd(30): inferring latch(es) for signal or variable "seldir", which holds its previous value in one or more paths through the process File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Warning (10631): VHDL Process Statement warning at u_control.vhd(30): inferring latch(es) for signal or variable "selop", which holds its previous value in one or more paths through the process File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Warning (10631): VHDL Process Statement warning at u_control.vhd(30): inferring latch(es) for signal or variable "selresult", which holds its previous value in one or more paths through the process File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Warning (10631): VHDL Process Statement warning at u_control.vhd(30): inferring latch(es) for signal or variable "selc", which holds its previous value in one or more paths through the process File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Warning (10631): VHDL Process Statement warning at u_control.vhd(30): inferring latch(es) for signal or variable "cadj", which holds its previous value in one or more paths through the process File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Warning (10631): VHDL Process Statement warning at u_control.vhd(30): inferring latch(es) for signal or variable "selfalgs", which holds its previous value in one or more paths through the process File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Warning (10631): VHDL Process Statement warning at u_control.vhd(30): inferring latch(es) for signal or variable "selbranch", which holds its previous value in one or more paths through the process File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Warning (10631): VHDL Process Statement warning at u_control.vhd(30): inferring latch(es) for signal or variable "vf", which holds its previous value in one or more paths through the process File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Warning (10631): VHDL Process Statement warning at u_control.vhd(30): inferring latch(es) for signal or variable "selregw", which holds its previous value in one or more paths through the process File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Warning (10631): VHDL Process Statement warning at u_control.vhd(30): inferring latch(es) for signal or variable "memw", which holds its previous value in one or more paths through the process File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Warning (10631): VHDL Process Statement warning at u_control.vhd(30): inferring latch(es) for signal or variable "seldirw", which holds its previous value in one or more paths through the process File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Info (10041): Inferred latch for "seldirw[0]" at u_control.vhd(30) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Info (10041): Inferred latch for "seldirw[1]" at u_control.vhd(30) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Info (10041): Inferred latch for "memw" at u_control.vhd(30) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Info (10041): Inferred latch for "selregw[0]" at u_control.vhd(30) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Info (10041): Inferred latch for "selregw[1]" at u_control.vhd(30) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Info (10041): Inferred latch for "selregw[2]" at u_control.vhd(30) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Info (10041): Inferred latch for "vf" at u_control.vhd(30) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Info (10041): Inferred latch for "selbranch[0]" at u_control.vhd(30) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Info (10041): Inferred latch for "selbranch[1]" at u_control.vhd(30) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Info (10041): Inferred latch for "selbranch[2]" at u_control.vhd(30) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Info (10041): Inferred latch for "selfalgs[0]" at u_control.vhd(30) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Info (10041): Inferred latch for "selfalgs[1]" at u_control.vhd(30) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Info (10041): Inferred latch for "selfalgs[2]" at u_control.vhd(30) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Info (10041): Inferred latch for "selfalgs[3]" at u_control.vhd(30) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Info (10041): Inferred latch for "cadj" at u_control.vhd(30) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Info (10041): Inferred latch for "selc" at u_control.vhd(30) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Info (10041): Inferred latch for "selresult[0]" at u_control.vhd(30) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Info (10041): Inferred latch for "selresult[1]" at u_control.vhd(30) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Info (10041): Inferred latch for "selop[0]" at u_control.vhd(30) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Info (10041): Inferred latch for "selop[1]" at u_control.vhd(30) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Info (10041): Inferred latch for "selop[2]" at u_control.vhd(30) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Info (10041): Inferred latch for "selop[3]" at u_control.vhd(30) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Info (10041): Inferred latch for "seldir[0]" at u_control.vhd(30) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Info (10041): Inferred latch for "seldir[1]" at u_control.vhd(30) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Info (10041): Inferred latch for "selsrc[0]" at u_control.vhd(30) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Info (10041): Inferred latch for "selsrc[1]" at u_control.vhd(30) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Info (10041): Inferred latch for "selsrc[2]" at u_control.vhd(30) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Info (10041): Inferred latch for "seldato" at u_control.vhd(30) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Info (10041): Inferred latch for "sels2" at u_control.vhd(30) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Info (10041): Inferred latch for "cin" at u_control.vhd(30) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Info (10041): Inferred latch for "sr" at u_control.vhd(30) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Info (10041): Inferred latch for "sels1" at u_control.vhd(30) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Info (10041): Inferred latch for "selregr[0]" at u_control.vhd(30) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Info (10041): Inferred latch for "selregr[1]" at u_control.vhd(30) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Info (10041): Inferred latch for "selregr[2]" at u_control.vhd(30) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Info (10041): Inferred latch for "selregr[3]" at u_control.vhd(30) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/u_control.vhd Line: 30
+Info (12128): Elaborating entity "registros" for hierarchy "etapa2:inst3|registros:inst700666"
+Info (12128): Elaborating entity "registro_esp" for hierarchy "etapa2:inst3|registros:inst700666|registro_esp:ACCA"
+Info (12128): Elaborating entity "deco_regw" for hierarchy "etapa2:inst3|registros:inst700666|deco_regw:inst1000"
+Info (12128): Elaborating entity "mux_regs" for hierarchy "etapa2:inst3|registros:inst700666|mux_regs:inst"
+Warning (10631): VHDL Process Statement warning at mux_regs.vhd(18): inferring latch(es) for signal or variable "D1", which holds its previous value in one or more paths through the process File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_regs.vhd Line: 18
+Warning (10631): VHDL Process Statement warning at mux_regs.vhd(18): inferring latch(es) for signal or variable "D2", which holds its previous value in one or more paths through the process File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_regs.vhd Line: 18
+Info (10041): Inferred latch for "D2[0]" at mux_regs.vhd(18) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_regs.vhd Line: 18
+Info (10041): Inferred latch for "D2[1]" at mux_regs.vhd(18) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_regs.vhd Line: 18
+Info (10041): Inferred latch for "D2[2]" at mux_regs.vhd(18) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_regs.vhd Line: 18
+Info (10041): Inferred latch for "D2[3]" at mux_regs.vhd(18) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_regs.vhd Line: 18
+Info (10041): Inferred latch for "D2[4]" at mux_regs.vhd(18) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_regs.vhd Line: 18
+Info (10041): Inferred latch for "D2[5]" at mux_regs.vhd(18) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_regs.vhd Line: 18
+Info (10041): Inferred latch for "D2[6]" at mux_regs.vhd(18) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_regs.vhd Line: 18
+Info (10041): Inferred latch for "D2[7]" at mux_regs.vhd(18) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_regs.vhd Line: 18
+Info (10041): Inferred latch for "D2[8]" at mux_regs.vhd(18) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_regs.vhd Line: 18
+Info (10041): Inferred latch for "D2[9]" at mux_regs.vhd(18) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_regs.vhd Line: 18
+Info (10041): Inferred latch for "D2[10]" at mux_regs.vhd(18) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_regs.vhd Line: 18
+Info (10041): Inferred latch for "D2[11]" at mux_regs.vhd(18) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_regs.vhd Line: 18
+Info (10041): Inferred latch for "D2[12]" at mux_regs.vhd(18) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_regs.vhd Line: 18
+Info (10041): Inferred latch for "D2[13]" at mux_regs.vhd(18) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_regs.vhd Line: 18
+Info (10041): Inferred latch for "D2[14]" at mux_regs.vhd(18) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_regs.vhd Line: 18
+Info (10041): Inferred latch for "D2[15]" at mux_regs.vhd(18) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_regs.vhd Line: 18
+Info (10041): Inferred latch for "D1[0]" at mux_regs.vhd(18) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_regs.vhd Line: 18
+Info (10041): Inferred latch for "D1[1]" at mux_regs.vhd(18) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_regs.vhd Line: 18
+Info (10041): Inferred latch for "D1[2]" at mux_regs.vhd(18) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_regs.vhd Line: 18
+Info (10041): Inferred latch for "D1[3]" at mux_regs.vhd(18) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_regs.vhd Line: 18
+Info (10041): Inferred latch for "D1[4]" at mux_regs.vhd(18) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_regs.vhd Line: 18
+Info (10041): Inferred latch for "D1[5]" at mux_regs.vhd(18) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_regs.vhd Line: 18
+Info (10041): Inferred latch for "D1[6]" at mux_regs.vhd(18) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_regs.vhd Line: 18
+Info (10041): Inferred latch for "D1[7]" at mux_regs.vhd(18) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_regs.vhd Line: 18
+Info (10041): Inferred latch for "D1[8]" at mux_regs.vhd(18) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_regs.vhd Line: 18
+Info (10041): Inferred latch for "D1[9]" at mux_regs.vhd(18) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_regs.vhd Line: 18
+Info (10041): Inferred latch for "D1[10]" at mux_regs.vhd(18) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_regs.vhd Line: 18
+Info (10041): Inferred latch for "D1[11]" at mux_regs.vhd(18) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_regs.vhd Line: 18
+Info (10041): Inferred latch for "D1[12]" at mux_regs.vhd(18) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_regs.vhd Line: 18
+Info (10041): Inferred latch for "D1[13]" at mux_regs.vhd(18) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_regs.vhd Line: 18
+Info (10041): Inferred latch for "D1[14]" at mux_regs.vhd(18) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_regs.vhd Line: 18
+Info (10041): Inferred latch for "D1[15]" at mux_regs.vhd(18) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_regs.vhd Line: 18
+Info (12128): Elaborating entity "registro_pc" for hierarchy "etapa2:inst3|registro_pc:inst9"
+Info (12128): Elaborating entity "mux_dir" for hierarchy "etapa2:inst3|mux_dir:inst2"
+Warning (10631): VHDL Process Statement warning at mux_dir.vhd(14): inferring latch(es) for signal or variable "sal", which holds its previous value in one or more paths through the process File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_dir.vhd Line: 14
+Info (10041): Inferred latch for "sal[0]" at mux_dir.vhd(14) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_dir.vhd Line: 14
+Info (10041): Inferred latch for "sal[1]" at mux_dir.vhd(14) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_dir.vhd Line: 14
+Info (10041): Inferred latch for "sal[2]" at mux_dir.vhd(14) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_dir.vhd Line: 14
+Info (10041): Inferred latch for "sal[3]" at mux_dir.vhd(14) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_dir.vhd Line: 14
+Info (10041): Inferred latch for "sal[4]" at mux_dir.vhd(14) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_dir.vhd Line: 14
+Info (10041): Inferred latch for "sal[5]" at mux_dir.vhd(14) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_dir.vhd Line: 14
+Info (10041): Inferred latch for "sal[6]" at mux_dir.vhd(14) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_dir.vhd Line: 14
+Info (10041): Inferred latch for "sal[7]" at mux_dir.vhd(14) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_dir.vhd Line: 14
+Info (10041): Inferred latch for "sal[8]" at mux_dir.vhd(14) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_dir.vhd Line: 14
+Info (10041): Inferred latch for "sal[9]" at mux_dir.vhd(14) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_dir.vhd Line: 14
+Info (10041): Inferred latch for "sal[10]" at mux_dir.vhd(14) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_dir.vhd Line: 14
+Info (10041): Inferred latch for "sal[11]" at mux_dir.vhd(14) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_dir.vhd Line: 14
+Info (10041): Inferred latch for "sal[12]" at mux_dir.vhd(14) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_dir.vhd Line: 14
+Info (10041): Inferred latch for "sal[13]" at mux_dir.vhd(14) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_dir.vhd Line: 14
+Info (10041): Inferred latch for "sal[14]" at mux_dir.vhd(14) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_dir.vhd Line: 14
+Info (10041): Inferred latch for "sal[15]" at mux_dir.vhd(14) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_dir.vhd Line: 14
+Info (12128): Elaborating entity "sumador" for hierarchy "etapa2:inst3|sumador:inst3"
+Warning (10631): VHDL Process Statement warning at sumador.vhd(16): inferring latch(es) for signal or variable "res", which holds its previous value in one or more paths through the process File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/sumador.vhd Line: 16
+Info (12128): Elaborating entity "mux_pc" for hierarchy "etapa2:inst3|mux_pc:inst201"
+Warning (10631): VHDL Process Statement warning at mux_pc.vhdl(13): inferring latch(es) for signal or variable "sal", which holds its previous value in one or more paths through the process File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_pc.vhdl Line: 13
+Info (10041): Inferred latch for "sal[0]" at mux_pc.vhdl(13) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_pc.vhdl Line: 13
+Info (10041): Inferred latch for "sal[1]" at mux_pc.vhdl(13) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_pc.vhdl Line: 13
+Info (10041): Inferred latch for "sal[2]" at mux_pc.vhdl(13) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_pc.vhdl Line: 13
+Info (10041): Inferred latch for "sal[3]" at mux_pc.vhdl(13) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_pc.vhdl Line: 13
+Info (10041): Inferred latch for "sal[4]" at mux_pc.vhdl(13) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_pc.vhdl Line: 13
+Info (10041): Inferred latch for "sal[5]" at mux_pc.vhdl(13) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_pc.vhdl Line: 13
+Info (10041): Inferred latch for "sal[6]" at mux_pc.vhdl(13) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_pc.vhdl Line: 13
+Info (10041): Inferred latch for "sal[7]" at mux_pc.vhdl(13) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_pc.vhdl Line: 13
+Info (10041): Inferred latch for "sal[8]" at mux_pc.vhdl(13) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_pc.vhdl Line: 13
+Info (10041): Inferred latch for "sal[9]" at mux_pc.vhdl(13) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_pc.vhdl Line: 13
+Info (10041): Inferred latch for "sal[10]" at mux_pc.vhdl(13) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_pc.vhdl Line: 13
+Info (10041): Inferred latch for "sal[11]" at mux_pc.vhdl(13) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_pc.vhdl Line: 13
+Info (10041): Inferred latch for "sal[12]" at mux_pc.vhdl(13) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_pc.vhdl Line: 13
+Info (10041): Inferred latch for "sal[13]" at mux_pc.vhdl(13) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_pc.vhdl Line: 13
+Info (10041): Inferred latch for "sal[14]" at mux_pc.vhdl(13) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_pc.vhdl Line: 13
+Info (10041): Inferred latch for "sal[15]" at mux_pc.vhdl(13) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_pc.vhdl Line: 13
+Info (12128): Elaborating entity "mux_dirw" for hierarchy "etapa2:inst3|mux_dirw:inst6"
+Info (12128): Elaborating entity "mux_src" for hierarchy "etapa2:inst3|mux_src:inst202"
+Warning (10631): VHDL Process Statement warning at mux_src.vhd(17): inferring latch(es) for signal or variable "OP1", which holds its previous value in one or more paths through the process File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_src.vhd Line: 17
+Warning (10631): VHDL Process Statement warning at mux_src.vhd(17): inferring latch(es) for signal or variable "OP2", which holds its previous value in one or more paths through the process File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_src.vhd Line: 17
+Info (10041): Inferred latch for "OP2[0]" at mux_src.vhd(17) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_src.vhd Line: 17
+Info (10041): Inferred latch for "OP2[1]" at mux_src.vhd(17) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_src.vhd Line: 17
+Info (10041): Inferred latch for "OP2[2]" at mux_src.vhd(17) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_src.vhd Line: 17
+Info (10041): Inferred latch for "OP2[3]" at mux_src.vhd(17) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_src.vhd Line: 17
+Info (10041): Inferred latch for "OP2[4]" at mux_src.vhd(17) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_src.vhd Line: 17
+Info (10041): Inferred latch for "OP2[5]" at mux_src.vhd(17) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_src.vhd Line: 17
+Info (10041): Inferred latch for "OP2[6]" at mux_src.vhd(17) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_src.vhd Line: 17
+Info (10041): Inferred latch for "OP2[7]" at mux_src.vhd(17) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_src.vhd Line: 17
+Info (10041): Inferred latch for "OP2[8]" at mux_src.vhd(17) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_src.vhd Line: 17
+Info (10041): Inferred latch for "OP2[9]" at mux_src.vhd(17) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_src.vhd Line: 17
+Info (10041): Inferred latch for "OP2[10]" at mux_src.vhd(17) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_src.vhd Line: 17
+Info (10041): Inferred latch for "OP2[11]" at mux_src.vhd(17) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_src.vhd Line: 17
+Info (10041): Inferred latch for "OP2[12]" at mux_src.vhd(17) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_src.vhd Line: 17
+Info (10041): Inferred latch for "OP2[13]" at mux_src.vhd(17) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_src.vhd Line: 17
+Info (10041): Inferred latch for "OP2[14]" at mux_src.vhd(17) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_src.vhd Line: 17
+Info (10041): Inferred latch for "OP2[15]" at mux_src.vhd(17) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_src.vhd Line: 17
+Info (10041): Inferred latch for "OP1[0]" at mux_src.vhd(17) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_src.vhd Line: 17
+Info (10041): Inferred latch for "OP1[1]" at mux_src.vhd(17) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_src.vhd Line: 17
+Info (10041): Inferred latch for "OP1[2]" at mux_src.vhd(17) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_src.vhd Line: 17
+Info (10041): Inferred latch for "OP1[3]" at mux_src.vhd(17) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_src.vhd Line: 17
+Info (10041): Inferred latch for "OP1[4]" at mux_src.vhd(17) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_src.vhd Line: 17
+Info (10041): Inferred latch for "OP1[5]" at mux_src.vhd(17) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_src.vhd Line: 17
+Info (10041): Inferred latch for "OP1[6]" at mux_src.vhd(17) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_src.vhd Line: 17
+Info (10041): Inferred latch for "OP1[7]" at mux_src.vhd(17) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_src.vhd Line: 17
+Info (10041): Inferred latch for "OP1[8]" at mux_src.vhd(17) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_src.vhd Line: 17
+Info (10041): Inferred latch for "OP1[9]" at mux_src.vhd(17) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_src.vhd Line: 17
+Info (10041): Inferred latch for "OP1[10]" at mux_src.vhd(17) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_src.vhd Line: 17
+Info (10041): Inferred latch for "OP1[11]" at mux_src.vhd(17) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_src.vhd Line: 17
+Info (10041): Inferred latch for "OP1[12]" at mux_src.vhd(17) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_src.vhd Line: 17
+Info (10041): Inferred latch for "OP1[13]" at mux_src.vhd(17) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_src.vhd Line: 17
+Info (10041): Inferred latch for "OP1[14]" at mux_src.vhd(17) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_src.vhd Line: 17
+Info (10041): Inferred latch for "OP1[15]" at mux_src.vhd(17) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_src.vhd Line: 17
+Info (12128): Elaborating entity "memoria_datos" for hierarchy "etapa2:inst3|memoria_datos:inst200"
+Warning (10492): VHDL Process Statement warning at memoria_datos.vhd(34): signal "memoria" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/memoria_datos.vhd Line: 34
+Warning (10631): VHDL Process Statement warning at memoria_datos.vhd(31): inferring latch(es) for signal or variable "datos", which holds its previous value in one or more paths through the process File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/memoria_datos.vhd Line: 31
+Info (10041): Inferred latch for "datos[0]" at memoria_datos.vhd(31) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/memoria_datos.vhd Line: 31
+Info (10041): Inferred latch for "datos[1]" at memoria_datos.vhd(31) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/memoria_datos.vhd Line: 31
+Info (10041): Inferred latch for "datos[2]" at memoria_datos.vhd(31) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/memoria_datos.vhd Line: 31
+Info (10041): Inferred latch for "datos[3]" at memoria_datos.vhd(31) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/memoria_datos.vhd Line: 31
+Info (10041): Inferred latch for "datos[4]" at memoria_datos.vhd(31) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/memoria_datos.vhd Line: 31
+Info (10041): Inferred latch for "datos[5]" at memoria_datos.vhd(31) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/memoria_datos.vhd Line: 31
+Info (10041): Inferred latch for "datos[6]" at memoria_datos.vhd(31) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/memoria_datos.vhd Line: 31
+Info (10041): Inferred latch for "datos[7]" at memoria_datos.vhd(31) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/memoria_datos.vhd Line: 31
+Info (10041): Inferred latch for "datos[8]" at memoria_datos.vhd(31) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/memoria_datos.vhd Line: 31
+Info (10041): Inferred latch for "datos[9]" at memoria_datos.vhd(31) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/memoria_datos.vhd Line: 31
+Info (10041): Inferred latch for "datos[10]" at memoria_datos.vhd(31) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/memoria_datos.vhd Line: 31
+Info (10041): Inferred latch for "datos[11]" at memoria_datos.vhd(31) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/memoria_datos.vhd Line: 31
+Info (10041): Inferred latch for "datos[12]" at memoria_datos.vhd(31) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/memoria_datos.vhd Line: 31
+Info (10041): Inferred latch for "datos[13]" at memoria_datos.vhd(31) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/memoria_datos.vhd Line: 31
+Info (10041): Inferred latch for "datos[14]" at memoria_datos.vhd(31) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/memoria_datos.vhd Line: 31
+Info (10041): Inferred latch for "datos[15]" at memoria_datos.vhd(31) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/memoria_datos.vhd Line: 31
+Info (12128): Elaborating entity "ext_signo" for hierarchy "etapa2:inst3|ext_signo:inst"
+Warning (10631): VHDL Process Statement warning at ext_signo.vhd(11): inferring latch(es) for signal or variable "salida", which holds its previous value in one or more paths through the process File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/ext_signo.vhd Line: 11
+Info (10041): Inferred latch for "salida[0]" at ext_signo.vhd(11) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/ext_signo.vhd Line: 11
+Info (10041): Inferred latch for "salida[1]" at ext_signo.vhd(11) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/ext_signo.vhd Line: 11
+Info (10041): Inferred latch for "salida[2]" at ext_signo.vhd(11) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/ext_signo.vhd Line: 11
+Info (10041): Inferred latch for "salida[3]" at ext_signo.vhd(11) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/ext_signo.vhd Line: 11
+Info (10041): Inferred latch for "salida[4]" at ext_signo.vhd(11) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/ext_signo.vhd Line: 11
+Info (10041): Inferred latch for "salida[5]" at ext_signo.vhd(11) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/ext_signo.vhd Line: 11
+Info (10041): Inferred latch for "salida[6]" at ext_signo.vhd(11) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/ext_signo.vhd Line: 11
+Info (10041): Inferred latch for "salida[7]" at ext_signo.vhd(11) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/ext_signo.vhd Line: 11
+Info (10041): Inferred latch for "salida[8]" at ext_signo.vhd(11) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/ext_signo.vhd Line: 11
+Info (10041): Inferred latch for "salida[9]" at ext_signo.vhd(11) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/ext_signo.vhd Line: 11
+Info (10041): Inferred latch for "salida[10]" at ext_signo.vhd(11) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/ext_signo.vhd Line: 11
+Info (10041): Inferred latch for "salida[11]" at ext_signo.vhd(11) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/ext_signo.vhd Line: 11
+Info (10041): Inferred latch for "salida[12]" at ext_signo.vhd(11) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/ext_signo.vhd Line: 11
+Info (10041): Inferred latch for "salida[13]" at ext_signo.vhd(11) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/ext_signo.vhd Line: 11
+Info (10041): Inferred latch for "salida[14]" at ext_signo.vhd(11) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/ext_signo.vhd Line: 11
+Info (10041): Inferred latch for "salida[15]" at ext_signo.vhd(11) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/ext_signo.vhd Line: 11
+Info (12128): Elaborating entity "etapa3" for hierarchy "etapa3:inst2"
+Info (12128): Elaborating entity "registro_1" for hierarchy "etapa3:inst2|registro_1:inst100"
+Info (12128): Elaborating entity "branch" for hierarchy "etapa3:inst2|branch:inst4"
+Warning (10631): VHDL Process Statement warning at branch.vhd(18): inferring latch(es) for signal or variable "branch", which holds its previous value in one or more paths through the process File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/branch.vhd Line: 18
+Info (10041): Inferred latch for "branch" at branch.vhd(18) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/branch.vhd Line: 18
+Info (12128): Elaborating entity "ccr" for hierarchy "etapa3:inst2|ccr:inst3"
+Warning (10631): VHDL Process Statement warning at ccr.vhd(30): inferring latch(es) for signal or variable "ni", which holds its previous value in one or more paths through the process File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/ccr.vhd Line: 30
+Warning (10631): VHDL Process Statement warning at ccr.vhd(30): inferring latch(es) for signal or variable "zi", which holds its previous value in one or more paths through the process File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/ccr.vhd Line: 30
+Warning (10631): VHDL Process Statement warning at ccr.vhd(30): inferring latch(es) for signal or variable "vi", which holds its previous value in one or more paths through the process File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/ccr.vhd Line: 30
+Warning (10631): VHDL Process Statement warning at ccr.vhd(30): inferring latch(es) for signal or variable "ci", which holds its previous value in one or more paths through the process File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/ccr.vhd Line: 30
+Warning (10631): VHDL Process Statement warning at ccr.vhd(30): inferring latch(es) for signal or variable "hi", which holds its previous value in one or more paths through the process File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/ccr.vhd Line: 30
+Warning (10631): VHDL Process Statement warning at ccr.vhd(30): inferring latch(es) for signal or variable "ii", which holds its previous value in one or more paths through the process File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/ccr.vhd Line: 30
+Info (10041): Inferred latch for "ii" at ccr.vhd(30) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/ccr.vhd Line: 30
+Info (10041): Inferred latch for "hi" at ccr.vhd(30) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/ccr.vhd Line: 30
+Info (10041): Inferred latch for "ci" at ccr.vhd(30) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/ccr.vhd Line: 30
+Info (10041): Inferred latch for "vi" at ccr.vhd(30) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/ccr.vhd Line: 30
+Info (10041): Inferred latch for "zi" at ccr.vhd(30) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/ccr.vhd Line: 30
+Info (10041): Inferred latch for "ni" at ccr.vhd(30) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/ccr.vhd Line: 30
+Info (12128): Elaborating entity "upa" for hierarchy "etapa3:inst2|upa:inst"
+Warning (10631): VHDL Process Statement warning at upa.vhd(23): inferring latch(es) for signal or variable "opres", which holds its previous value in one or more paths through the process File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[0]" at upa.vhd(23) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[1]" at upa.vhd(23) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[2]" at upa.vhd(23) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[3]" at upa.vhd(23) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[4]" at upa.vhd(23) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[5]" at upa.vhd(23) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[6]" at upa.vhd(23) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[7]" at upa.vhd(23) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[8]" at upa.vhd(23) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[9]" at upa.vhd(23) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[10]" at upa.vhd(23) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[11]" at upa.vhd(23) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[12]" at upa.vhd(23) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[13]" at upa.vhd(23) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[14]" at upa.vhd(23) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[15]" at upa.vhd(23) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/upa.vhd Line: 23
+Info (10041): Inferred latch for "opres[16]" at upa.vhd(23) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/upa.vhd Line: 23
+Info (12128): Elaborating entity "mux_1" for hierarchy "etapa3:inst2|mux_1:inst1"
+Warning (10631): VHDL Process Statement warning at mux_1.vhd(13): inferring latch(es) for signal or variable "sal", which holds its previous value in one or more paths through the process File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_1.vhd Line: 13
+Info (10041): Inferred latch for "sal" at mux_1.vhd(13) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_1.vhd Line: 13
+Info (12128): Elaborating entity "reg_acoplo_4" for hierarchy "etapa3:inst2|reg_acoplo_4:inst107"
+Info (12128): Elaborating entity "mux_result" for hierarchy "etapa3:inst2|mux_result:inst2"
+Warning (10631): VHDL Process Statement warning at mux_result.vhd(16): inferring latch(es) for signal or variable "dirw", which holds its previous value in one or more paths through the process File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_result.vhd Line: 16
+Warning (10631): VHDL Process Statement warning at mux_result.vhd(16): inferring latch(es) for signal or variable "datow", which holds its previous value in one or more paths through the process File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_result.vhd Line: 16
+Info (10041): Inferred latch for "datow[0]" at mux_result.vhd(16) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_result.vhd Line: 16
+Info (10041): Inferred latch for "datow[1]" at mux_result.vhd(16) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_result.vhd Line: 16
+Info (10041): Inferred latch for "datow[2]" at mux_result.vhd(16) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_result.vhd Line: 16
+Info (10041): Inferred latch for "datow[3]" at mux_result.vhd(16) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_result.vhd Line: 16
+Info (10041): Inferred latch for "datow[4]" at mux_result.vhd(16) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_result.vhd Line: 16
+Info (10041): Inferred latch for "datow[5]" at mux_result.vhd(16) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_result.vhd Line: 16
+Info (10041): Inferred latch for "datow[6]" at mux_result.vhd(16) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_result.vhd Line: 16
+Info (10041): Inferred latch for "datow[7]" at mux_result.vhd(16) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_result.vhd Line: 16
+Info (10041): Inferred latch for "datow[8]" at mux_result.vhd(16) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_result.vhd Line: 16
+Info (10041): Inferred latch for "datow[9]" at mux_result.vhd(16) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_result.vhd Line: 16
+Info (10041): Inferred latch for "datow[10]" at mux_result.vhd(16) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_result.vhd Line: 16
+Info (10041): Inferred latch for "datow[11]" at mux_result.vhd(16) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_result.vhd Line: 16
+Info (10041): Inferred latch for "datow[12]" at mux_result.vhd(16) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_result.vhd Line: 16
+Info (10041): Inferred latch for "datow[13]" at mux_result.vhd(16) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_result.vhd Line: 16
+Info (10041): Inferred latch for "datow[14]" at mux_result.vhd(16) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_result.vhd Line: 16
+Info (10041): Inferred latch for "datow[15]" at mux_result.vhd(16) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_result.vhd Line: 16
+Info (10041): Inferred latch for "dirw[0]" at mux_result.vhd(16) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_result.vhd Line: 16
+Info (10041): Inferred latch for "dirw[1]" at mux_result.vhd(16) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_result.vhd Line: 16
+Info (10041): Inferred latch for "dirw[2]" at mux_result.vhd(16) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_result.vhd Line: 16
+Info (10041): Inferred latch for "dirw[3]" at mux_result.vhd(16) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_result.vhd Line: 16
+Info (10041): Inferred latch for "dirw[4]" at mux_result.vhd(16) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_result.vhd Line: 16
+Info (10041): Inferred latch for "dirw[5]" at mux_result.vhd(16) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_result.vhd Line: 16
+Info (10041): Inferred latch for "dirw[6]" at mux_result.vhd(16) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_result.vhd Line: 16
+Info (10041): Inferred latch for "dirw[7]" at mux_result.vhd(16) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_result.vhd Line: 16
+Info (10041): Inferred latch for "dirw[8]" at mux_result.vhd(16) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_result.vhd Line: 16
+Info (10041): Inferred latch for "dirw[9]" at mux_result.vhd(16) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_result.vhd Line: 16
+Info (10041): Inferred latch for "dirw[10]" at mux_result.vhd(16) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_result.vhd Line: 16
+Info (10041): Inferred latch for "dirw[11]" at mux_result.vhd(16) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_result.vhd Line: 16
+Info (10041): Inferred latch for "dirw[12]" at mux_result.vhd(16) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_result.vhd Line: 16
+Info (10041): Inferred latch for "dirw[13]" at mux_result.vhd(16) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_result.vhd Line: 16
+Info (10041): Inferred latch for "dirw[14]" at mux_result.vhd(16) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_result.vhd Line: 16
+Info (10041): Inferred latch for "dirw[15]" at mux_result.vhd(16) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/mux_result.vhd Line: 16
+Info (12128): Elaborating entity "divisor" for hierarchy "divisor:inst1"
+Warning (10542): VHDL Variable Declaration warning at divisor.vhd(18): used initial value expression for variable "limite" because variable was never assigned a value File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/divisor.vhd Line: 18
+Info (12128): Elaborating entity "etapa1" for hierarchy "etapa1:inst"
+Info (12128): Elaborating entity "registro_inst" for hierarchy "etapa1:inst|registro_inst:inst5"
+Info (12128): Elaborating entity "memoria_inst" for hierarchy "etapa1:inst|memoria_inst:inst1"
+Warning (10492): VHDL Process Statement warning at memoria_inst.vhd(33): signal "memoria" is read inside the Process Statement but isn't in the Process Statement's sensitivity list File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/memoria_inst.vhd Line: 33
+Warning (10873): Using initial value X (don't care) for net "memoria[9..50]" at memoria_inst.vhd(15) File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/memoria_inst.vhd Line: 15
+Info (12128): Elaborating entity "incrementador" for hierarchy "etapa1:inst|incrementador:inst"
+Warning (14026): LATCH primitive "etapa2:inst3|memoria_datos:inst200|datos[1]" is permanently enabled File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/memoria_datos.vhd Line: 31
+Warning (14026): LATCH primitive "etapa2:inst3|memoria_datos:inst200|datos[0]" is permanently enabled File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/memoria_datos.vhd Line: 31
+Warning (14026): LATCH primitive "etapa2:inst3|memoria_datos:inst200|datos[3]" is permanently enabled File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/memoria_datos.vhd Line: 31
+Warning (14026): LATCH primitive "etapa3:inst2|branch:inst4|branch" is permanently enabled File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/branch.vhd Line: 13
+Warning (14026): LATCH primitive "etapa3:inst2|branch:inst4|branch" is permanently enabled File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/branch.vhd Line: 13
+Warning (13012): Latch etapa3:inst2|upa:inst|opres[15] has unsafe behavior File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal etapa2:inst3|reg_acoplo_3:inst10|selop[2] File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch etapa3:inst2|upa:inst|opres[14] has unsafe behavior File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal etapa2:inst3|reg_acoplo_3:inst10|selop[0] File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch etapa3:inst2|upa:inst|opres[13] has unsafe behavior File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal etapa2:inst3|reg_acoplo_3:inst10|selop[2] File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch etapa3:inst2|upa:inst|opres[12] has unsafe behavior File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal etapa2:inst3|reg_acoplo_3:inst10|selop[0] File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch etapa3:inst2|upa:inst|opres[11] has unsafe behavior File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal etapa2:inst3|reg_acoplo_3:inst10|selop[2] File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch etapa3:inst2|upa:inst|opres[10] has unsafe behavior File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal etapa2:inst3|reg_acoplo_3:inst10|selop[0] File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch etapa3:inst2|upa:inst|opres[9] has unsafe behavior File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal etapa2:inst3|reg_acoplo_3:inst10|selop[2] File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch etapa3:inst2|upa:inst|opres[8] has unsafe behavior File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal etapa2:inst3|reg_acoplo_3:inst10|selop[0] File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch etapa3:inst2|upa:inst|opres[7] has unsafe behavior File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal etapa2:inst3|reg_acoplo_3:inst10|selop[2] File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch etapa3:inst2|upa:inst|opres[6] has unsafe behavior File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal etapa2:inst3|reg_acoplo_3:inst10|selop[0] File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch etapa3:inst2|upa:inst|opres[5] has unsafe behavior File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal etapa2:inst3|reg_acoplo_3:inst10|selop[2] File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch etapa3:inst2|upa:inst|opres[4] has unsafe behavior File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal etapa2:inst3|reg_acoplo_3:inst10|selop[0] File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch etapa3:inst2|upa:inst|opres[3] has unsafe behavior File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal etapa2:inst3|reg_acoplo_3:inst10|selop[2] File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch etapa3:inst2|upa:inst|opres[2] has unsafe behavior File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal etapa2:inst3|reg_acoplo_3:inst10|selop[0] File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch etapa3:inst2|upa:inst|opres[1] has unsafe behavior File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal etapa2:inst3|reg_acoplo_3:inst10|selop[2] File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch etapa3:inst2|upa:inst|opres[0] has unsafe behavior File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal etapa2:inst3|reg_acoplo_3:inst10|selop[0] File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/reg_acoplo_3.vhd Line: 46
+Warning (13012): Latch etapa3:inst2|upa:inst|opres[16] has unsafe behavior File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/upa.vhd Line: 23
+    Warning (13013): Ports D and ENA on the latch are fed by the same signal etapa2:inst3|reg_acoplo_3:inst10|selop[2] File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/reg_acoplo_3.vhd Line: 46
+Info (13000): Registers with preset signals will power-up high File: C:/Users/Angel-Znoker/Documents/9noSemestre/Arqui/p8/reg_acoplo_3.vhd Line: 46
+Info (13003): DEV_CLRn pin will set, and not reset, register with preset signal due to NOT Gate Push-Back
+Info (286030): Timing-Driven Synthesis is running
+Info (17049): 91 registers lost all their fanouts during netlist optimizations.
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 273 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 2 input pins
+    Info (21059): Implemented 16 output pins
+    Info (21061): Implemented 255 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 82 warnings
+    Info: Peak virtual memory: 4801 megabytes
+    Info: Processing ended: Wed Nov 13 07:22:20 2019
+    Info: Elapsed time: 0-5:0-58:0-33
+    Info: Total CPU time (on all processors): 00:01:22
+
+

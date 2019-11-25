@@ -1,0 +1,81 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "salida[15]",
+					"strict" : false
+				},
+				{
+					"name" : "salida[14]",
+					"strict" : false
+				},
+				{
+					"name" : "salida[13]",
+					"strict" : false
+				},
+				{
+					"name" : "salida[12]",
+					"strict" : false
+				},
+				{
+					"name" : "salida[11]",
+					"strict" : false
+				},
+				{
+					"name" : "salida[10]",
+					"strict" : false
+				},
+				{
+					"name" : "salida[9]",
+					"strict" : false
+				},
+				{
+					"name" : "salida[8]",
+					"strict" : false
+				},
+				{
+					"name" : "salida[7]",
+					"strict" : false
+				},
+				{
+					"name" : "salida[6]",
+					"strict" : false
+				},
+				{
+					"name" : "salida[5]",
+					"strict" : false
+				},
+				{
+					"name" : "salida[4]",
+					"strict" : false
+				},
+				{
+					"name" : "salida[3]",
+					"strict" : false
+				},
+				{
+					"name" : "salida[2]",
+					"strict" : false
+				},
+				{
+					"name" : "salida[1]",
+					"strict" : false
+				},
+				{
+					"name" : "salida[0]",
+					"strict" : false
+				},
+				{
+					"name" : "RESET",
+					"strict" : false
+				},
+				{
+					"name" : "RELOJ",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

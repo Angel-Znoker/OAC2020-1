@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Fri Nov 01 22:43:12 2019
+Analysis & Synthesis Status : Successful - Wed Nov 06 13:53:32 2019
 Quartus Prime Version : 17.1.0 Build 590 10/25/2017 SJ Lite Edition
 Revision Name : practica7
 Top-level Entity Name : practica7
 Family : MAX 10
-Total logic elements : 3,871
-    Total combinational functions : 3,869
-    Dedicated logic registers : 155
-Total registers : 155
+Total logic elements : 3,868
+    Total combinational functions : 3,866
+    Dedicated logic registers : 154
+Total registers : 154
 Total pins : 12
 Total virtual pins : 0
 Total memory bits : 0

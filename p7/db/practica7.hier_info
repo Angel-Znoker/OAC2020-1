@@ -2058,7 +2058,6 @@ reloj => cuenta[20].CLK
 reloj => cuenta[21].CLK
 reloj => cuenta[22].CLK
 reloj => cuenta[23].CLK
-reloj => cuenta[24].CLK
 clk <= div.DB_MAX_OUTPUT_PORT_TYPE
 
 
