@@ -18,7 +18,7 @@
 -- the top level entity of the current Quartus project .The user can use this   
 -- testbench to simulate his design using a third-party simulation tool .       
 -- *****************************************************************************
--- Generated on "11/12/2019 20:57:51"
+-- Generated on "12/02/2019 21:38:37"
                                                              
 -- Vhdl Test Bench(with test vectors) for design  :          pipeline
 -- 
@@ -33,26 +33,32 @@ END pipeline_vhd_vec_tst;
 ARCHITECTURE pipeline_arch OF pipeline_vhd_vec_tst IS
 -- constants                                                 
 -- signals                                                   
+SIGNAL AccA : STD_LOGIC_VECTOR(15 DOWNTO 0);
+SIGNAL AccB : STD_LOGIC_VECTOR(15 DOWNTO 0);
+SIGNAL dato : STD_LOGIC_VECTOR(15 DOWNTO 0);
+SIGNAL instr : STD_LOGIC_VECTOR(15 DOWNTO 0);
 SIGNAL RELOJ : STD_LOGIC;
 SIGNAL RESET : STD_LOGIC;
-SIGNAL salida : STD_LOGIC_VECTOR(15 DOWNTO 0);
-SIGNAL sw : STD_LOGIC;
 COMPONENT pipeline
 	PORT (
+	AccA : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+	AccB : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+	dato : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+	instr : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
 	RELOJ : IN STD_LOGIC;
-	RESET : IN STD_LOGIC;
-	salida : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
-	sw : IN STD_LOGIC
+	RESET : IN STD_LOGIC
 	);
 END COMPONENT;
 BEGIN
 	i1 : pipeline
 	PORT MAP (
 -- list connections between master ports and signals
+	AccA => AccA,
+	AccB => AccB,
+	dato => dato,
+	instr => instr,
 	RELOJ => RELOJ,
-	RESET => RESET,
-	salida => salida,
-	sw => sw
+	RESET => RESET
 	);
 
 -- RELOJ
@@ -73,11 +79,4 @@ BEGIN
 	RESET <= '1';
 WAIT;
 END PROCESS t_prcs_RESET;
-
--- sw
-t_prcs_sw: PROCESS
-BEGIN
-	sw <= '0';
-WAIT;
-END PROCESS t_prcs_sw;
 END pipeline_arch;

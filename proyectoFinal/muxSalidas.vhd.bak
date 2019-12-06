@@ -1,0 +1,26 @@
+library IEEE;
+use IEEE.STD_LOGIC_1164.ALL;
+use IEEE.STD_LOGIC_ARITH.ALL;
+use IEEE.STD_LOGIC_UNSIGNED.ALL;
+
+entity muxSalidas is
+	port	(	AccA, AccB, instr: in std_logic_vector(15 downto 0);
+				sw : in std_logic_vector(1 downto 0);
+				salida : out std_logic_vector(9 downto 0));
+end muxSalidas;
+
+architecture Behavioral of muxSalidas is
+begin
+	process(sw, AccA, AccB, instr)
+	begin
+		if sw = "00" then
+			salida <= AccA(9 downto 0);
+		elsif sw = "01" then
+			salida <= AccB(9 downto 0);
+		elsif sw = "10" then
+			salida <= instr(9 downto 0);
+		else
+			salida <= "0000000000";
+		end if;
+	end process;
+end Behavioral;
